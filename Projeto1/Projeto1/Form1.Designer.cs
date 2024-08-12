@@ -28,33 +28,92 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            btnIr = new Button();
+            btnAtencao = new Button();
+            btnPare = new Button();
+            lbInfo = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // btnIr
             // 
-            button1.BackColor = SystemColors.ActiveCaption;
-            button1.Location = new Point(24, 26);
-            button1.Name = "button1";
-            button1.Size = new Size(116, 73);
-            button1.TabIndex = 0;
-            button1.Text = "Botão 1";
-            button1.UseVisualStyleBackColor = false;
+            btnIr.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnIr.BackColor = Color.Lime;
+            btnIr.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnIr.Location = new Point(33, 278);
+            btnIr.Name = "btnIr";
+            btnIr.Size = new Size(133, 83);
+            btnIr.TabIndex = 0;
+            btnIr.Text = "Acelera, vai, acelera!";
+            btnIr.UseVisualStyleBackColor = false;
+            btnIr.Click += btnIr_click_infoVerde;
+            // 
+            // btnAtencao
+            // 
+            btnAtencao.BackColor = Color.Yellow;
+            btnAtencao.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAtencao.Location = new Point(33, 167);
+            btnAtencao.Name = "btnAtencao";
+            btnAtencao.Size = new Size(133, 83);
+            btnAtencao.TabIndex = 1;
+            btnAtencao.Text = "Olhe para o lado";
+            btnAtencao.UseVisualStyleBackColor = false;
+            btnAtencao.Click += btnAtencao_click_mudaCor;
+            // 
+            // btnPare
+            // 
+            btnPare.BackColor = Color.Red;
+            btnPare.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnPare.Location = new Point(33, 50);
+            btnPare.Name = "btnPare";
+            btnPare.Size = new Size(133, 83);
+            btnPare.TabIndex = 2;
+            btnPare.Text = "Calmo calabreso!";
+            btnPare.UseVisualStyleBackColor = false;
+            btnPare.Click += btnPare_click_infoVermelho;
+            // 
+            // lbInfo
+            // 
+            lbInfo.AutoSize = true;
+            lbInfo.Location = new Point(307, 83);
+            lbInfo.Name = "lbInfo";
+            lbInfo.Size = new Size(0, 17);
+            lbInfo.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Location = new Point(249, 140);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(514, 179);
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button1);
+            ClientSize = new Size(870, 419);
+            Controls.Add(pictureBox1);
+            Controls.Add(lbInfo);
+            Controls.Add(btnPare);
+            Controls.Add(btnAtencao);
+            Controls.Add(btnIr);
+            Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Name = "Form1";
             Text = "form1";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
+        private Button btnIr;
+        private Button btnAtencao;
+        private Button btnPare;
+        private Label lbInfo;
+        private PictureBox pictureBox1;
     }
 }
