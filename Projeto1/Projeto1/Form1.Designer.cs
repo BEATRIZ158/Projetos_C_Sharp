@@ -76,18 +76,20 @@
             // lbInfo
             // 
             lbInfo.AutoSize = true;
-            lbInfo.Location = new Point(307, 83);
+            lbInfo.Location = new Point(274, 65);
             lbInfo.Name = "lbInfo";
             lbInfo.Size = new Size(0, 17);
             lbInfo.TabIndex = 3;
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(249, 140);
+            pictureBox1.Location = new Point(258, 103);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(514, 179);
+            pictureBox1.Size = new Size(511, 258);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // Form1
             // 

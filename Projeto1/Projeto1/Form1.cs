@@ -37,5 +37,10 @@ namespace Projeto1
             lbInfo.Text = "Passagem permitida, acelere!";
             pictureBox1.Load("../../../img/verde.png");
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
