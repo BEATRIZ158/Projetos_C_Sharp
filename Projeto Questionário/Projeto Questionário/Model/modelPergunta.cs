@@ -15,8 +15,7 @@ namespace Projeto_Questionário.Model
         private string alter3;
         private string alter4;
         private string resposta;
-        private int idTipo;
-
+        private int idCategoria;
 
         public int IdPergunta { get => idPergunta; set => idPergunta = value; }
         public string Pergunta { get => pergunta; set => pergunta = value; }
@@ -25,6 +24,6 @@ namespace Projeto_Questionário.Model
         public string Alter3 { get => alter3; set => alter3 = value; }
         public string Alter4 { get => alter4; set => alter4 = value; }
         public string Resposta { get => resposta; set => resposta = value; }
-        public int IdTipo { get => idTipo; set => idTipo = value; }
+        public int IdCategoria { get => idCategoria; set => idCategoria = value; }
     }
 }

@@ -10,7 +10,6 @@ namespace Projeto_Questionário.Model
     {
         private int idCategoria;
         private string nomeCategoria;
-
         
         public int IdCategoria{ get => idCategoria; set => idCategoria = value;}
         public string NomeCategoria { get => nomeCategoria; set => nomeCategoria = value; }
