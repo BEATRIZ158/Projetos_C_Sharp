@@ -15,72 +15,12 @@ namespace Projeto_Questionário.Model
         private string email;
         private string senha;
         private int idTipoUsuario;
-        //region serve para esconder o código, cria uma região nomeada
-        #region idUsuario
-        public int getidUsuario()
-        {
-            return this.idUsuario;
-        }
-        public void setidusuario(int idUsuario)
-        {
-            this.idUsuario = idUsuario;
-        }
-        #endregion
 
-        #region cpf
-        private long getCpf()
-        {
-            return this.cpf; //Retorna valor cpf
-        }
-
-        private void setCpf(long cpf)
-        {
-            this.cpf = cpf;//A variável que recebe o valor
-        }
-        #endregion
-
-        #region nomeUsurio
-        private string getnomeUsuario()
-        {
-            return this.nomeUsuario;
-        }
-        private void setnomeUsuario(string nomeUsuario)
-        {
-            this.nomeUsuario = nomeUsuario;
-        }
-        #endregion
-
-        #region email
-        private string getEmail()
-        {
-            return this.email;
-        }
-        private void setEmail(string email)
-        {
-            this.email = email;
-        }
-        #endregion
-        
-        #region senha
-        private string getSenha()
-        {
-            return this.senha;
-        }
-        private void setSenha(string senha)
-        {
-            this.senha = senha;
-        }
-        #endregion
-
-        #region idTipousuario
-        private int getidTipoUsuario()
-        {
-            return this.idTipoUsuario; 
-        }
-        private void setidTipoUsuario(int idTipoUsuario)
-        {
-            this.idTipoUsuario = idTipoUsuario;
-        }
-        #endregion
+        public int IdUsuario { get => idUsuario; set => idUsuario = value; }
+        public long Cpf { get => cpf; set => cpf = value; }
+        public string NomeUsuario { get => nomeUsuario; set => nomeUsuario = value; }
+        public string Email { get => email; set => email = value; }
+        public string Senha { get => senha; set => senha = value; }
+        public int IdTipoUsuario { get => idTipoUsuario; set => idTipoUsuario = value; }
     }
 }

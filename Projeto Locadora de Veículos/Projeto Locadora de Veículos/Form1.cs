@@ -1,4 +1,4 @@
-namespace Projeto_Questionário
+namespace Projeto_Locadora_de_Veículos
 {
     public partial class Form1 : Form
     {
@@ -7,9 +7,5 @@ namespace Projeto_Questionário
             InitializeComponent();
         }
 
-        private void teste()
-        {
-
-        }
     }
 }
