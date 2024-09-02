@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "2eTWbTIzgcs=",
+  "dgSpecHash": "oWUa3cwr8Gc=",
   "success": true,
   "projectFilePath": "C:\\Users\\beatr\\OneDrive\\Área de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Questionário\\Projeto Questionário\\Projeto Questionário.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\beatr\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\beatr\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\beatr\\.nuget\\packages\\npgsql\\8.0.3\\npgsql.8.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

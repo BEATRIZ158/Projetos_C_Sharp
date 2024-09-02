@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Projeto Questionário")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+21d9393c7f32bf5fa4fec18862069a7eb21b3139")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c8d7f153ff057803d70d9d7007921b24233f0b7a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Projeto Questionário")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Projeto Questionário")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
