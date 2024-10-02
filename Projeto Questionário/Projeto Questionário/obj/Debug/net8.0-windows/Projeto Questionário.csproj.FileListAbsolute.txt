@@ -1,0 +1,73 @@
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\bin\Debug\net8.0-windows\Projeto Questionário.exe
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\bin\Debug\net8.0-windows\Projeto Questionário.deps.json
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\bin\Debug\net8.0-windows\Projeto Questionário.runtimeconfig.json
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\bin\Debug\net8.0-windows\Projeto Questionário.dll
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\bin\Debug\net8.0-windows\Projeto Questionário.pdb
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\bin\Debug\net8.0-windows\Npgsql.dll
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.csproj.AssemblyReference.cache
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.csproj.GenerateResource.cache
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.AssemblyInfoInputs.cache
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.AssemblyInfo.cs
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.csproj.CoreCompileInputs.cache
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.sourcelink.json
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto .38FAB0C9.Up2Date
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.dll
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\refint\Projeto Questionário.dll
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.pdb
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.genruntimeconfig.cache
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\ref\Projeto Questionário.dll
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto_Questionário.Principal.resources
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto_Questionário.Properties.Resources.resources
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto_Questionário.View.Login.resources
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto_Questionário.View.Categoria.resources
+D:\Projeto Questionário\Projeto Questionário\bin\Debug\net8.0-windows\Projeto Questionário.exe
+D:\Projeto Questionário\Projeto Questionário\bin\Debug\net8.0-windows\Projeto Questionário.deps.json
+D:\Projeto Questionário\Projeto Questionário\bin\Debug\net8.0-windows\Projeto Questionário.runtimeconfig.json
+D:\Projeto Questionário\Projeto Questionário\bin\Debug\net8.0-windows\Projeto Questionário.dll
+D:\Projeto Questionário\Projeto Questionário\bin\Debug\net8.0-windows\Projeto Questionário.pdb
+D:\Projeto Questionário\Projeto Questionário\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Projeto Questionário\Projeto Questionário\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Projeto Questionário\Projeto Questionário\bin\Debug\net8.0-windows\Npgsql.dll
+D:\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.csproj.AssemblyReference.cache
+D:\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto_Questionário.Properties.Resources.resources
+D:\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto_Questionário.View.CATEGORIA.resources
+D:\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto_Questionário.View.Login.resources
+D:\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto_Questionário.Principal.resources
+D:\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.csproj.GenerateResource.cache
+D:\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.AssemblyInfoInputs.cache
+D:\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.AssemblyInfo.cs
+D:\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.csproj.CoreCompileInputs.cache
+D:\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto .38FAB0C9.Up2Date
+D:\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.dll
+D:\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\refint\Projeto Questionário.dll
+D:\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.pdb
+D:\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.genruntimeconfig.cache
+D:\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\ref\Projeto Questionário.dll
+C:\Users\Aluno\Desktop\Projeto Questionário\Projeto Questionário\bin\Debug\net8.0-windows\Projeto Questionário.exe
+C:\Users\Aluno\Desktop\Projeto Questionário\Projeto Questionário\bin\Debug\net8.0-windows\Projeto Questionário.deps.json
+C:\Users\Aluno\Desktop\Projeto Questionário\Projeto Questionário\bin\Debug\net8.0-windows\Projeto Questionário.runtimeconfig.json
+C:\Users\Aluno\Desktop\Projeto Questionário\Projeto Questionário\bin\Debug\net8.0-windows\Projeto Questionário.dll
+C:\Users\Aluno\Desktop\Projeto Questionário\Projeto Questionário\bin\Debug\net8.0-windows\Projeto Questionário.pdb
+C:\Users\Aluno\Desktop\Projeto Questionário\Projeto Questionário\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Aluno\Desktop\Projeto Questionário\Projeto Questionário\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Aluno\Desktop\Projeto Questionário\Projeto Questionário\bin\Debug\net8.0-windows\Npgsql.dll
+C:\Users\Aluno\Desktop\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.csproj.AssemblyReference.cache
+C:\Users\Aluno\Desktop\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto_Questionário.Properties.Resources.resources
+C:\Users\Aluno\Desktop\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto_Questionário.View.CATEGORIA.resources
+C:\Users\Aluno\Desktop\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto_Questionário.View.Login.resources
+C:\Users\Aluno\Desktop\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto_Questionário.Principal.resources
+C:\Users\Aluno\Desktop\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.csproj.GenerateResource.cache
+C:\Users\Aluno\Desktop\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aluno\Desktop\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.AssemblyInfoInputs.cache
+C:\Users\Aluno\Desktop\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.AssemblyInfo.cs
+C:\Users\Aluno\Desktop\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\Desktop\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto .38FAB0C9.Up2Date
+C:\Users\Aluno\Desktop\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.dll
+C:\Users\Aluno\Desktop\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\refint\Projeto Questionário.dll
+C:\Users\Aluno\Desktop\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.pdb
+C:\Users\Aluno\Desktop\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.genruntimeconfig.cache
+C:\Users\Aluno\Desktop\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\ref\Projeto Questionário.dll

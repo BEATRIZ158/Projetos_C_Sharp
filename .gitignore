@@ -1,2 +1,5 @@
 # Ignorar a pasta config inteira
 **/Controller/
+
+# Gitignore
+*/.gitignore 
