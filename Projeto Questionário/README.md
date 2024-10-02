@@ -5,23 +5,33 @@ Consiste no desenvolvimento de uma aplicação desktop para criação de questio
 
 ## Explicação sobre as pastas e seus arquivos
 
-*Modelo de Classes*
+**Modelo de Classes**
 
 Essa pasta contém o arquivo do Diagrama de Classes, desenvolvido no Astah UML para o projeto.
 
-*Projeto Questionário*
+**Projeto Questionário**
 
 Essa pasta contém os arquivos e pastas necessários para o funcionamento da aplicação. Dentro dela temos mais algumas pastas que contém arquivos importantes.
 
-Controller: Nessa pasta estão os arquivos .cs (C Sharp). Alguns desses arquivos são o controlleLogin.cs, controllerCategoria.cs e controllerUsuario.cs, em resumo esses arquivos contém as classes e seus atributos e métodos, que podem ser usados por suas instâncias, é dentro da Controller que é realizados alguns métodos de conexão com o Banco de dados, funções como inserir, alterar e excluir são definidos aqui.
+*Controller*
 
-img: Onde estão os arquivos de Imagem do projeto, que são usados para a estilização da aplicação.
+Nessa pasta estão os arquivos .cs (C Sharp). Alguns desses arquivos são o controlleLogin.cs, controllerCategoria.cs e controllerUsuario.cs, em resumo esses arquivos contém as classes e seus atributos e métodos, que podem ser usados por suas instâncias, é dentro da Controller que é realizados alguns métodos de conexão com o Banco de dados, funções como inserir, alterar e excluir são definidos aqui.
 
-Model: Dentro desta pasta estão os arquivos model, casa arquivo representa um modelo, cada modelo possui seus atributos, seus atributos são privados e podem ser acessados através da criação de uma instância de objeto que permite o acesso a esses atributos, essas instâncias recebem os valores que vem dos Form's, passam para a controller, que passam para o banco e suas tabelas, para que os dados sejam armazenados ou manipulados.
+*img* 
 
-View: Dentro da pasta View estão os Forms e os arquivos .cs deles, nessa pasta contém arquivos relacionais a parte visual da aplicação.
+Onde estão os arquivos de Imagem do projeto, que são usados para a estilização da aplicação.
 
-Screns: Essa pasta contém as imagens das telas que são apresentadas neste README.
+*Model* 
+
+Dentro desta pasta estão os arquivos model, casa arquivo representa um modelo, cada modelo possui seus atributos, seus atributos são privados e podem ser acessados através da criação de uma instância de objeto que permite o acesso a esses atributos, essas instâncias recebem os valores que vem dos Form's, passam para a controller, que passam para o banco e suas tabelas, para que os dados sejam armazenados ou manipulados.
+
+*View*
+
+Dentro da pasta View estão os Forms e os arquivos .cs deles, nessa pasta contém arquivos relacionais a parte visual da aplicação.
+
+*Screns* 
+
+Essa pasta contém as imagens das telas que são apresentadas neste README.
 
 ## Capturas de Tela
 
