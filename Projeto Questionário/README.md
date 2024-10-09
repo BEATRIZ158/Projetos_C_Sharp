@@ -49,3 +49,6 @@ Essa pasta contém as imagens das telas que são apresentadas neste README.
 
 ### Tela Categoria - Editar Categoria
 ![Tela Categoria - Editar Categoria](Screns/Tela%20Categoria%20-%20Editar.png)
+
+### Tela Nova Pergunta
+![Tela Nova Pergunta](Screns/Tela%20Nova%20Pergunta.png)

@@ -75,7 +75,7 @@
             abaNovaCategoria.Location = new Point(4, 29);
             abaNovaCategoria.Name = "abaNovaCategoria";
             abaNovaCategoria.Padding = new Padding(3);
-            abaNovaCategoria.Size = new Size(597, 228);
+            abaNovaCategoria.Size = new Size(595, 236);
             abaNovaCategoria.TabIndex = 0;
             abaNovaCategoria.Text = "NOVA CATEGORIA";
             abaNovaCategoria.UseVisualStyleBackColor = true;
@@ -231,6 +231,7 @@
             btnAtualizaCategoria.Text = "ATUALIZAR";
             btnAtualizaCategoria.TextAlign = ContentAlignment.MiddleRight;
             btnAtualizaCategoria.UseVisualStyleBackColor = true;
+            btnAtualizaCategoria.Click += atualizaCategoria;
             // 
             // txbEditarCategoria
             // 

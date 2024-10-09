@@ -91,7 +91,7 @@ namespace Projeto_Questionário.View
             MessageBox.Show("Deseja editar esta categoria?", "Editar conteúdo",
             MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if(botao == DialogResult.Yes)
+            if (botao == DialogResult.Yes)
             {
                 //Armazena na variavel idcategoria o valor da coluna 0, na linha
                 //selecionada na dataGridView
@@ -103,6 +103,19 @@ namespace Projeto_Questionário.View
                 tabCategoria.SelectedTab = abaEditar;
 
             }
+        }
+
+        private void atualizaCategoria(object sender, EventArgs e)
+        {
+            modelCategoria mCategoria = new modelCategoria();
+            controllerCategoria cCategoria = new controllerCategoria();
+
+            mCategoria.NomeCategoria = txbEditarCategoria.Text;
+            mCategoria.IdCategoria = idcategoria;
+
+            string res = cCategoria.atualizaCategorias(mCategoria);
+
+            MessageBox.Show(res);
         }
     }
 }

@@ -227,6 +227,7 @@
             novaPergunta.TextAlign = ContentAlignment.BottomCenter;
             novaPergunta.TextImageRelation = TextImageRelation.ImageAboveText;
             novaPergunta.ToolTipText = "NOVA";
+            novaPergunta.Click += formPergunta;
             // 
             // verPontos
             // 
@@ -234,7 +235,7 @@
             verPontos.ImageScaling = ToolStripItemImageScaling.None;
             verPontos.ImageTransparentColor = Color.Magenta;
             verPontos.Name = "verPontos";
-            verPontos.Size = new Size(86, 83);
+            verPontos.Size = new Size(88, 83);
             verPontos.Text = "DESEMPENHO";
             verPontos.TextAlign = ContentAlignment.BottomCenter;
             verPontos.TextImageRelation = TextImageRelation.ImageAboveText;

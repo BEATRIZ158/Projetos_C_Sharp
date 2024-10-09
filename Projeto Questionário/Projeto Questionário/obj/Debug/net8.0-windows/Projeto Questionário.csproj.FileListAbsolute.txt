@@ -71,3 +71,4 @@ C:\Users\Aluno\Desktop\Projeto Questionário\Projeto Questionário\obj\Debug\net
 C:\Users\Aluno\Desktop\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.pdb
 C:\Users\Aluno\Desktop\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto Questionário.genruntimeconfig.cache
 C:\Users\Aluno\Desktop\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\ref\Projeto Questionário.dll
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Debug\net8.0-windows\Projeto_Questionário.View.Pergunta.resources

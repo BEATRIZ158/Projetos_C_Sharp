@@ -58,5 +58,11 @@ namespace Projeto_Questionário
             CATEGORIA frm = new CATEGORIA();
             frm.ShowDialog();
         }
+
+        private void formPergunta(object sender, EventArgs e)
+        {
+            Pergunta frm = new Pergunta();
+            frm.ShowDialog();
+        }
     }
 }
