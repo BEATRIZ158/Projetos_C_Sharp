@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pergunta));
-            tabControl1 = new TabControl();
+            tabPerguntas = new TabControl();
             abaCadastro = new TabPage();
             groupBox2 = new GroupBox();
             label5 = new Label();
@@ -52,24 +52,24 @@
             txbResposta = new RichTextBox();
             btnCancelar = new Button();
             btnCadastrar = new Button();
-            tabControl1.SuspendLayout();
+            tabPerguntas.SuspendLayout();
             abaCadastro.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox3.SuspendLayout();
             SuspendLayout();
             // 
-            // tabControl1
+            // tabPerguntas
             // 
-            tabControl1.Controls.Add(abaCadastro);
-            tabControl1.Controls.Add(abaPesquisa);
-            tabControl1.Controls.Add(abaEditar);
-            tabControl1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tabControl1.Location = new Point(1, 2);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(866, 394);
-            tabControl1.TabIndex = 0;
+            tabPerguntas.Controls.Add(abaCadastro);
+            tabPerguntas.Controls.Add(abaPesquisa);
+            tabPerguntas.Controls.Add(abaEditar);
+            tabPerguntas.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tabPerguntas.Location = new Point(1, 2);
+            tabPerguntas.Name = "tabPerguntas";
+            tabPerguntas.SelectedIndex = 0;
+            tabPerguntas.Size = new Size(866, 394);
+            tabPerguntas.TabIndex = 0;
             // 
             // abaCadastro
             // 
@@ -307,11 +307,11 @@
             Controls.Add(btnCancelar);
             Controls.Add(btnCadastrar);
             Controls.Add(groupBox3);
-            Controls.Add(tabControl1);
+            Controls.Add(tabPerguntas);
             Name = "Pergunta";
             Text = "FORMULÁRIO DE CONTROLE DE PERGUNTAS";
             Load += configForm;
-            tabControl1.ResumeLayout(false);
+            tabPerguntas.ResumeLayout(false);
             abaCadastro.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
@@ -324,7 +324,7 @@
 
         #endregion
 
-        private TabControl tabControl1;
+        private TabControl tabPerguntas;
         private TabPage abaCadastro;
         private TabPage abaPesquisa;
         private TabPage abaEditar;

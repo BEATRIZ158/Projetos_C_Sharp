@@ -76,6 +76,28 @@ namespace Projeto_Questionário.View
             {
                 MessageBox.Show("Há campos não preenchidos!");
             }
+            else
+            {
+                modelPergunta mPergunta = new modelPergunta();
+                controllerPergunta cPergunta = new controllerPergunta();
+
+                //atribuindo valores dos campos para os atributos
+                mPergunta.Pergunta = txbPergunta.Text;
+                mPergunta.Alter1 = txbAlter1.Text;
+                mPergunta.Alter2 = txbAlter2.Text;
+                mPergunta.Alter3 = txbAlter3.Text;
+                mPergunta.Alter4 = txbAlter4.Text;
+                mPergunta.Resposta = txbResposta.Text;
+
+                //pegando valor de uma combobox com dados selecionados do BD
+                mPergunta.IdCategoria = Convert.ToInt32(comboBox1.SelectedValue);
+
+                //Passando os valores da instância para o método de cadastro
+                string resultado = cPergunta.cadastraPergunta(mPergunta);
+
+                //exibir a resposta do método de cadastro
+                MessageBox.Show(resultado);
+            }
         }
     }
 }
