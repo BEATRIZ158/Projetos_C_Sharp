@@ -203,6 +203,7 @@
             novoAluno.Text = "NOVO";
             novoAluno.TextAlign = ContentAlignment.BottomCenter;
             novoAluno.TextImageRelation = TextImageRelation.ImageAboveText;
+            novoAluno.Click += formUsuario;
             // 
             // novoProfessor
             // 
@@ -214,6 +215,7 @@
             novoProfessor.Text = "NOVO";
             novoProfessor.TextAlign = ContentAlignment.BottomCenter;
             novoProfessor.TextImageRelation = TextImageRelation.ImageAboveText;
+            novoProfessor.Click += formUsuario;
             // 
             // novaPergunta
             // 
@@ -235,7 +237,7 @@
             verPontos.ImageScaling = ToolStripItemImageScaling.None;
             verPontos.ImageTransparentColor = Color.Magenta;
             verPontos.Name = "verPontos";
-            verPontos.Size = new Size(88, 83);
+            verPontos.Size = new Size(86, 83);
             verPontos.Text = "DESEMPENHO";
             verPontos.TextAlign = ContentAlignment.BottomCenter;
             verPontos.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -256,6 +258,7 @@
             Text = "Form1";
             Load += loadPrincipal;
             Shown += formLogin;
+            VisibleChanged += habilitarBotoes;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             toolStrip1.ResumeLayout(false);

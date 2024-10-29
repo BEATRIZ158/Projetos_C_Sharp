@@ -44,6 +44,7 @@ namespace Projeto_Questionário.View
         {
             this.Close();
         }
+
         //Evento de pesquisar as categorias
         private void listaCategoria(object sender, EventArgs e)
         {
@@ -79,7 +80,6 @@ namespace Projeto_Questionário.View
                     }
                     // Insere a linha lida na DataGrid
                     dataGridView1.Rows.Add(linha);
-
                 }
             }
         }

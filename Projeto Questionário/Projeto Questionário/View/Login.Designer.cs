@@ -52,7 +52,7 @@
             panel1.Controls.Add(label1);
             panel1.Location = new Point(291, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(497, 283);
+            panel1.Size = new Size(473, 283);
             panel1.TabIndex = 0;
             // 
             // button2
@@ -60,13 +60,14 @@
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.Image = (Image)resources.GetObject("button2.Image");
             button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(322, 203);
+            button2.Location = new Point(273, 205);
             button2.Name = "button2";
-            button2.Size = new Size(80, 50);
+            button2.Size = new Size(100, 50);
             button2.TabIndex = 5;
             button2.Text = "SAIR";
             button2.TextAlign = ContentAlignment.MiddleRight;
             button2.UseVisualStyleBackColor = true;
+            button2.Click += fecharLogin;
             // 
             // button1
             // 
@@ -91,6 +92,7 @@
             textBox2.PasswordChar = '*';
             textBox2.Size = new Size(450, 30);
             textBox2.TabIndex = 3;
+            textBox2.Text = "123edu";
             // 
             // textBox1
             // 
@@ -99,6 +101,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(450, 30);
             textBox1.TabIndex = 2;
+            textBox1.Text = "eduardo@teste.com";
             // 
             // label2
             // 
@@ -146,7 +149,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
-            ClientSize = new Size(800, 307);
+            ClientSize = new Size(774, 307);
             Controls.Add(linkLabel1);
             Controls.Add(pictureBox1);
             Controls.Add(panel1);

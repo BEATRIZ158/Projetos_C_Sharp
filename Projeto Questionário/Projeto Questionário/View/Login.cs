@@ -20,10 +20,10 @@ namespace Projeto_Questionário.View
         {
             InitializeComponent();
         }
-        
+
         private void logar(object sender, EventArgs e)
         {
-            // Instância de bojeto de classe dá acesso aos dados do usuário
+            // Instância de objeto de classe dá acesso aos dados do usuário
             modelUsuario mUsuario = new modelUsuario();
             controllerUsuario cUsuario = new controllerUsuario();
 
@@ -46,6 +46,11 @@ namespace Projeto_Questionário.View
             {
                 MessageBox.Show("Usuário ou senha incorretos");
             }
+        }
+
+        private void fecharLogin(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
