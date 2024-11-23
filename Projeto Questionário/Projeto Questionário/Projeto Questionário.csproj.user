@@ -13,6 +13,9 @@
     <Compile Update="View\Principal.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\Questionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\Usuario.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -99,5 +99,57 @@ namespace Projeto_Questionário.View
                 MessageBox.Show(resultado);
             }
         }
+
+        private void selecionaLinha(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void listaPerguntas(object sender, EventArgs e)
+        {
+            modelPergunta mPergunta = new modelPergunta();
+            controllerPergunta cPergunta = new controllerPergunta();
+
+            mPergunta.Pergunta = txbPesquisaPergunta.Text + "%";
+
+            NpgsqlDataReader pergunta = cPergunta.listaPerguntas(mPergunta);
+
+            // Verifica se o DataReader é nulo
+            if (pergunta == null)
+            {
+                MessageBox.Show("Erro: Não foi possível obter os dados da pergunta.");
+                return;
+            }
+
+            // Configurar e exibir o resultado na DataGridView
+            if (pergunta.HasRows)
+            {
+                // Limpa a Grid a cada novo SELECT
+                dataGridViewPergunta.Columns.Clear();
+
+                // Define quantas colunas de dados a Grid terá
+                dataGridViewPergunta.ColumnCount = pergunta.FieldCount;
+
+                // Vetor que irá armazenar temporariamente os dados de uma linha
+                string[] linha = new string[pergunta.FieldCount];
+
+                // Usando Laço de repetição para percorrer o DataReader
+                while (pergunta.Read())
+                {
+                    // Le os dados das colunas do DataReader
+                    for (int i = 0; i < pergunta.FieldCount; i++)
+                    {
+                        linha[i] = pergunta.IsDBNull(i) ? "" : pergunta.GetValue(i).ToString();
+                    }
+                    // Insere a linha na DataGrid
+                    dataGridViewPergunta.Rows.Add(linha);
+                }
+            }
+        }
+
+        private void atualizaPerguntas(object sender, EventArgs e)
+        {
+
+        }
     }
 }

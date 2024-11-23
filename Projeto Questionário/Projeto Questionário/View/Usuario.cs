@@ -20,7 +20,7 @@ namespace Projeto_Questionário.View
             InitializeComponent();
         }
 
-        //Método para retorna a comboBoxTipo
+        //Método para retornar a comboBoxTipo
         public ComboBox ComboBoxTipoPublic
         {
             get { return comboBoxTipo; }
@@ -49,6 +49,12 @@ namespace Projeto_Questionário.View
             // Se as senhas forem iguais, prossegue com o cadastro
             string res = cUsuario.cadastraUsuario(mUsuario);
             MessageBox.Show(res);
+
+            txbNomeUser.Text = "";
+            txbEmail.Text = "";
+            txbSenhaUser.Text = "";
+            txbConfirmarSenha.Text = "";
+
         }
 
         private void listaUsuario(object sender, EventArgs e)
@@ -82,6 +88,10 @@ namespace Projeto_Questionário.View
                 // Usando Laço de repetição para percorrer o DataReader
                 while (usuario.Read())
                 {
+                    if(mUsuario.IdTipoUsuario = 2)
+                    {
+
+                    }
                     // Le os dados das colunas do DataReader
                     for (int i = 0; i < usuario.FieldCount; i++)
                     {
@@ -161,7 +171,7 @@ namespace Projeto_Questionário.View
                 //Armazena na variavel idusuario o valor da coluna 0, na linha
                 //selecionada na dataGridView
                 idusuario = Convert.ToInt32(dataGridViewUser.CurrentRow.Cells[0].Value);
-                txbEditarUser.Text =
+                txbEditarNomeUser.Text =
                     dataGridViewUser.CurrentRow.Cells[1].Value.ToString();
 
                 txbEditarEmail.Text =
@@ -177,7 +187,7 @@ namespace Projeto_Questionário.View
             modelUsuario mUsuario = new modelUsuario();
             controllerUsuario cUsuario = new controllerUsuario();
 
-            mUsuario.NomeUsuario = txbEditarUser.Text;
+            mUsuario.NomeUsuario = txbEditarNomeUser.Text;
             mUsuario.Email = txbEditarEmail.Text;
             mUsuario.Senha = txbEditarSenha.Text;
             mUsuario.IdTipoUsuario = Convert.ToInt32(comboBoxTipo1.SelectedValue);
@@ -188,8 +198,32 @@ namespace Projeto_Questionário.View
             MessageBox.Show(res);
         }
 
-        private void btnCancelarUser_Click(object sender, EventArgs e)
+        private void AtualizarUsuario(object sender, EventArgs e)
         {
+            // Criando uma nova instância de objeto da classe modelUsuario, para usar seus atributos
+            modelUsuario mUsuario = new modelUsuario();
+            controllerUsuario cUsuario = new controllerUsuario();
+
+            mUsuario.NomeUsuario = txbEditarNomeUser.Text;
+            mUsuario.Email = txbEditarEmail.Text;
+            mUsuario.Senha = txbEditarSenha.Text;
+            mUsuario.IdTipoUsuario = Convert.ToInt32(comboBoxTipo1.SelectedValue);
+
+            // Verificar se as senhas coincidem antes de continuar
+            if (txbEditarSenha.Text != txbEditarConfir.Text)
+            {
+                MessageBox.Show("As senhas precisam ser iguais!");
+                return;
+            }
+
+            // Se as senhas forem iguais, prossegue com o cadastro
+            string res = cUsuario.atualizaUsuarios(mUsuario);
+            MessageBox.Show(res);
+
+            txbEditarNomeUser.Text = "";
+            txbEditarEmail.Text = "";
+            txbEditarSenha.Text = "";
+            txbEditarConfir.Text = "";
 
         }
     }

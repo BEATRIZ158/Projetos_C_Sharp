@@ -58,12 +58,12 @@
             label5 = new Label();
             pictureBox2 = new PictureBox();
             button1 = new Button();
-            button2 = new Button();
+            btnAtualizar = new Button();
             txbEditarSenha = new TextBox();
             label6 = new Label();
             txbEditarEmail = new TextBox();
             label7 = new Label();
-            comboBoxEditarTipo = new ComboBox();
+            comboBoxTipo1 = new ComboBox();
             label8 = new Label();
             label9 = new Label();
             txbEditarNomeUser = new TextBox();
@@ -142,20 +142,19 @@
             // 
             btnCancelarUser.Image = (Image)resources.GetObject("btnCancelarUser.Image");
             btnCancelarUser.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCancelarUser.Location = new Point(396, 301);
+            btnCancelarUser.Location = new Point(476, 297);
             btnCancelarUser.Name = "btnCancelarUser";
             btnCancelarUser.Size = new Size(128, 37);
             btnCancelarUser.TabIndex = 9;
             btnCancelarUser.Text = "CANCELAR";
             btnCancelarUser.TextAlign = ContentAlignment.MiddleRight;
             btnCancelarUser.UseVisualStyleBackColor = true;
-            btnCancelarUser.Click += btnCancelarUser_Click;
             // 
             // btnCadastrarUser
             // 
             btnCadastrarUser.Image = (Image)resources.GetObject("btnCadastrarUser.Image");
             btnCadastrarUser.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCadastrarUser.Location = new Point(203, 301);
+            btnCadastrarUser.Location = new Point(283, 297);
             btnCadastrarUser.Name = "btnCadastrarUser";
             btnCadastrarUser.Size = new Size(138, 37);
             btnCadastrarUser.TabIndex = 8;
@@ -319,12 +318,12 @@
             tabEditar.Controls.Add(label5);
             tabEditar.Controls.Add(pictureBox2);
             tabEditar.Controls.Add(button1);
-            tabEditar.Controls.Add(button2);
+            tabEditar.Controls.Add(btnAtualizar);
             tabEditar.Controls.Add(txbEditarSenha);
             tabEditar.Controls.Add(label6);
             tabEditar.Controls.Add(txbEditarEmail);
             tabEditar.Controls.Add(label7);
-            tabEditar.Controls.Add(comboBoxEditarTipo);
+            tabEditar.Controls.Add(comboBoxTipo1);
             tabEditar.Controls.Add(label8);
             tabEditar.Controls.Add(label9);
             tabEditar.Controls.Add(txbEditarNomeUser);
@@ -366,7 +365,7 @@
             // 
             button1.Image = (Image)resources.GetObject("button1.Image");
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(397, 295);
+            button1.Location = new Point(487, 296);
             button1.Name = "button1";
             button1.Size = new Size(128, 37);
             button1.TabIndex = 22;
@@ -374,17 +373,18 @@
             button1.TextAlign = ContentAlignment.MiddleRight;
             button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnAtualizar
             // 
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(204, 295);
-            button2.Name = "button2";
-            button2.Size = new Size(138, 37);
-            button2.TabIndex = 21;
-            button2.Text = "CADASTRAR";
-            button2.TextAlign = ContentAlignment.MiddleRight;
-            button2.UseVisualStyleBackColor = true;
+            btnAtualizar.Image = (Image)resources.GetObject("btnAtualizar.Image");
+            btnAtualizar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAtualizar.Location = new Point(294, 296);
+            btnAtualizar.Name = "btnAtualizar";
+            btnAtualizar.Size = new Size(138, 37);
+            btnAtualizar.TabIndex = 21;
+            btnAtualizar.Text = "ATUALIZAR";
+            btnAtualizar.TextAlign = ContentAlignment.MiddleRight;
+            btnAtualizar.UseVisualStyleBackColor = true;
+            btnAtualizar.Click += AtualizarUsuario;
             // 
             // txbEditarSenha
             // 
@@ -420,13 +420,13 @@
             label7.TabIndex = 17;
             label7.Text = "E-MAIL:";
             // 
-            // comboBoxEditarTipo
+            // comboBoxTipo1
             // 
-            comboBoxEditarTipo.FormattingEnabled = true;
-            comboBoxEditarTipo.Location = new Point(487, 109);
-            comboBoxEditarTipo.Name = "comboBoxEditarTipo";
-            comboBoxEditarTipo.Size = new Size(172, 28);
-            comboBoxEditarTipo.TabIndex = 16;
+            comboBoxTipo1.FormattingEnabled = true;
+            comboBoxTipo1.Location = new Point(487, 109);
+            comboBoxTipo1.Name = "comboBoxTipo1";
+            comboBoxTipo1.Size = new Size(172, 28);
+            comboBoxTipo1.TabIndex = 16;
             // 
             // label8
             // 
@@ -509,12 +509,12 @@
         private Label label5;
         private PictureBox pictureBox2;
         private Button button1;
-        private Button button2;
+        private Button btnAtualizar;
         private TextBox txbEditarSenha;
         private Label label6;
         private TextBox txbEditarEmail;
         private Label label7;
-        private ComboBox comboBoxEditarTipo;
+        private ComboBox comboBoxTipo1;
         private Label label8;
         private Label label9;
         private TextBox txbEditarNomeUser;

@@ -44,11 +44,12 @@
             pesqPontuacao = new ToolStripMenuItem();
             pesqUsuario = new ToolStripMenuItem();
             toolStrip1 = new ToolStrip();
-            novoQuestionario = new ToolStripButton();
+            verPontos = new ToolStripButton();
             novoAluno = new ToolStripButton();
             novoProfessor = new ToolStripButton();
             novaPergunta = new ToolStripButton();
-            verPontos = new ToolStripButton();
+            toolStripButton1 = new ToolStripButton();
+            novoQuestionario = new ToolStripButton();
             menuStrip1.SuspendLayout();
             toolStrip1.SuspendLayout();
             SuspendLayout();
@@ -60,7 +61,7 @@
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(9, 3, 0, 3);
-            menuStrip1.Size = new Size(863, 30);
+            menuStrip1.Size = new Size(924, 30);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -171,25 +172,24 @@
             // toolStrip1
             // 
             toolStrip1.Dock = DockStyle.Left;
-            toolStrip1.Items.AddRange(new ToolStripItem[] { novoQuestionario, novoAluno, novoProfessor, novaPergunta, verPontos });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { verPontos, novoAluno, novoProfessor, novaPergunta, toolStripButton1 });
             toolStrip1.Location = new Point(0, 30);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(89, 449);
+            toolStrip1.Size = new Size(89, 478);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
             // 
-            // novoQuestionario
+            // verPontos
             // 
-            novoQuestionario.Font = new Font("Century", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            novoQuestionario.Image = (Image)resources.GetObject("novoQuestionario.Image");
-            novoQuestionario.ImageAlign = ContentAlignment.TopCenter;
-            novoQuestionario.ImageScaling = ToolStripItemImageScaling.None;
-            novoQuestionario.ImageTransparentColor = Color.Magenta;
-            novoQuestionario.Name = "novoQuestionario";
-            novoQuestionario.Size = new Size(86, 84);
-            novoQuestionario.Text = "NOVO";
-            novoQuestionario.TextAlign = ContentAlignment.BottomCenter;
-            novoQuestionario.TextImageRelation = TextImageRelation.ImageAboveText;
+            verPontos.Image = (Image)resources.GetObject("verPontos.Image");
+            verPontos.ImageScaling = ToolStripItemImageScaling.None;
+            verPontos.ImageTransparentColor = Color.Magenta;
+            verPontos.Name = "verPontos";
+            verPontos.Size = new Size(86, 83);
+            verPontos.Text = "NOVO";
+            verPontos.TextAlign = ContentAlignment.BottomCenter;
+            verPontos.TextImageRelation = TextImageRelation.ImageAboveText;
+            verPontos.Click += formQuestionario;
             // 
             // novoAluno
             // 
@@ -231,16 +231,28 @@
             novaPergunta.ToolTipText = "NOVA";
             novaPergunta.Click += formPergunta;
             // 
-            // verPontos
+            // toolStripButton1
             // 
-            verPontos.Image = (Image)resources.GetObject("verPontos.Image");
-            verPontos.ImageScaling = ToolStripItemImageScaling.None;
-            verPontos.ImageTransparentColor = Color.Magenta;
-            verPontos.Name = "verPontos";
-            verPontos.Size = new Size(86, 83);
-            verPontos.Text = "DESEMPENHO";
-            verPontos.TextAlign = ContentAlignment.BottomCenter;
-            verPontos.TextImageRelation = TextImageRelation.ImageAboveText;
+            toolStripButton1.Image = (Image)resources.GetObject("toolStripButton1.Image");
+            toolStripButton1.ImageScaling = ToolStripItemImageScaling.None;
+            toolStripButton1.ImageTransparentColor = Color.Magenta;
+            toolStripButton1.Name = "toolStripButton1";
+            toolStripButton1.Size = new Size(86, 83);
+            toolStripButton1.Text = "DESEMPENHO";
+            toolStripButton1.TextAlign = ContentAlignment.BottomCenter;
+            toolStripButton1.TextImageRelation = TextImageRelation.ImageAboveText;
+            // 
+            // novoQuestionario
+            // 
+            novoQuestionario.Font = new Font("Century", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            novoQuestionario.ImageAlign = ContentAlignment.TopCenter;
+            novoQuestionario.ImageScaling = ToolStripItemImageScaling.None;
+            novoQuestionario.ImageTransparentColor = Color.Magenta;
+            novoQuestionario.Name = "novoQuestionario";
+            novoQuestionario.Size = new Size(23, 23);
+            novoQuestionario.Text = "NOVO";
+            novoQuestionario.TextAlign = ContentAlignment.BottomCenter;
+            novoQuestionario.TextImageRelation = TextImageRelation.ImageAboveText;
             // 
             // Principal
             // 
@@ -248,7 +260,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(863, 479);
+            ClientSize = new Size(924, 508);
             Controls.Add(toolStrip1);
             Controls.Add(menuStrip1);
             Font = new Font("Century", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -289,5 +301,6 @@
         private ToolStripButton novoProfessor;
         private ToolStripButton novaPergunta;
         private ToolStripButton verPontos;
+        private ToolStripButton toolStripButton1;
     }
 }

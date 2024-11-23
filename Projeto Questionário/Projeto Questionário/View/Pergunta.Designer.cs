@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pergunta));
             tabPerguntas = new TabControl();
             abaCadastro = new TabPage();
+            btnCancelar = new Button();
+            btnCadastrar = new Button();
             groupBox2 = new GroupBox();
             label5 = new Label();
             txbAlter4 = new RichTextBox();
@@ -45,18 +47,49 @@
             comboBox1 = new ComboBox();
             label1 = new Label();
             txbPergunta = new RichTextBox();
-            abaPesquisa = new TabPage();
-            abaEditar = new TabPage();
             groupBox3 = new GroupBox();
             label7 = new Label();
             txbResposta = new RichTextBox();
-            btnCancelar = new Button();
-            btnCadastrar = new Button();
+            abaPesquisa = new TabPage();
+            btnPesquisaUser = new Button();
+            txbPesquisaPergunta = new TextBox();
+            txtPergunta = new Label();
+            dataGridViewPergunta = new DataGridView();
+            ColumnID = new DataGridViewTextBoxColumn();
+            ColumnPergunta = new DataGridViewTextBoxColumn();
+            ColumnResposta = new DataGridViewTextBoxColumn();
+            ColumnCategoria = new DataGridViewTextBoxColumn();
+            abaEditar = new TabPage();
+            groupBox6 = new GroupBox();
+            label14 = new Label();
+            richTextBox6 = new RichTextBox();
+            button1 = new Button();
+            btnAtualizar = new Button();
+            groupBox5 = new GroupBox();
+            label10 = new Label();
+            richTextBox2 = new RichTextBox();
+            label11 = new Label();
+            richTextBox3 = new RichTextBox();
+            label12 = new Label();
+            richTextBox4 = new RichTextBox();
+            label13 = new Label();
+            richTextBox5 = new RichTextBox();
+            groupBox4 = new GroupBox();
+            label8 = new Label();
+            comboBox2 = new ComboBox();
+            label9 = new Label();
+            richTextBox1 = new RichTextBox();
             tabPerguntas.SuspendLayout();
             abaCadastro.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox3.SuspendLayout();
+            abaPesquisa.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPergunta).BeginInit();
+            abaEditar.SuspendLayout();
+            groupBox6.SuspendLayout();
+            groupBox5.SuspendLayout();
+            groupBox4.SuspendLayout();
             SuspendLayout();
             // 
             // tabPerguntas
@@ -68,21 +101,51 @@
             tabPerguntas.Location = new Point(1, 2);
             tabPerguntas.Name = "tabPerguntas";
             tabPerguntas.SelectedIndex = 0;
-            tabPerguntas.Size = new Size(866, 394);
+            tabPerguntas.Size = new Size(866, 526);
             tabPerguntas.TabIndex = 0;
             // 
             // abaCadastro
             // 
+            abaCadastro.Controls.Add(btnCancelar);
+            abaCadastro.Controls.Add(btnCadastrar);
             abaCadastro.Controls.Add(groupBox2);
             abaCadastro.Controls.Add(groupBox1);
+            abaCadastro.Controls.Add(groupBox3);
             abaCadastro.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             abaCadastro.Location = new Point(4, 30);
             abaCadastro.Name = "abaCadastro";
             abaCadastro.Padding = new Padding(3);
-            abaCadastro.Size = new Size(858, 360);
+            abaCadastro.Size = new Size(858, 492);
             abaCadastro.TabIndex = 0;
             abaCadastro.Text = "NOVA PERGUNTA";
             abaCadastro.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.Font = new Font("Century", 12F);
+            btnCancelar.Image = (Image)resources.GetObject("btnCancelar.Image");
+            btnCancelar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCancelar.Location = new Point(721, 411);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(127, 37);
+            btnCancelar.TabIndex = 5;
+            btnCancelar.Text = "CANCELAR";
+            btnCancelar.TextAlign = ContentAlignment.MiddleRight;
+            btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // btnCadastrar
+            // 
+            btnCadastrar.Font = new Font("Century", 12F);
+            btnCadastrar.Image = (Image)resources.GetObject("btnCadastrar.Image");
+            btnCadastrar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCadastrar.Location = new Point(528, 411);
+            btnCadastrar.Name = "btnCadastrar";
+            btnCadastrar.Size = new Size(137, 37);
+            btnCadastrar.TabIndex = 4;
+            btnCadastrar.Text = "CADASTRAR";
+            btnCadastrar.TextAlign = ContentAlignment.MiddleRight;
+            btnCadastrar.UseVisualStyleBackColor = true;
+            btnCadastrar.Click += novaPergunta;
             // 
             // groupBox2
             // 
@@ -191,7 +254,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(638, 20);
+            label2.Location = new Point(618, 20);
             label2.Name = "label2";
             label2.Size = new Size(92, 21);
             label2.TabIndex = 3;
@@ -199,10 +262,13 @@
             // 
             // comboBox1
             // 
+            comboBox1.BackColor = SystemColors.Window;
+            comboBox1.Font = new Font("Century", 12F);
+            comboBox1.ForeColor = SystemColors.WindowText;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(643, 43);
+            comboBox1.Location = new Point(623, 43);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(198, 25);
+            comboBox1.Size = new Size(218, 28);
             comboBox1.TabIndex = 2;
             // 
             // label1
@@ -219,37 +285,17 @@
             // 
             txbPergunta.Location = new Point(6, 43);
             txbPergunta.Name = "txbPergunta";
-            txbPergunta.Size = new Size(615, 73);
+            txbPergunta.Size = new Size(603, 73);
             txbPergunta.TabIndex = 0;
             txbPergunta.Text = "";
-            // 
-            // abaPesquisa
-            // 
-            abaPesquisa.Location = new Point(4, 30);
-            abaPesquisa.Name = "abaPesquisa";
-            abaPesquisa.Padding = new Padding(3);
-            abaPesquisa.Size = new Size(858, 360);
-            abaPesquisa.TabIndex = 1;
-            abaPesquisa.Text = "PESQUISAR";
-            abaPesquisa.UseVisualStyleBackColor = true;
-            // 
-            // abaEditar
-            // 
-            abaEditar.Location = new Point(4, 30);
-            abaEditar.Name = "abaEditar";
-            abaEditar.Padding = new Padding(3);
-            abaEditar.Size = new Size(858, 360);
-            abaEditar.TabIndex = 2;
-            abaEditar.Text = "EDITAR";
-            abaEditar.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
             groupBox3.Controls.Add(label7);
             groupBox3.Controls.Add(txbResposta);
-            groupBox3.Location = new Point(5, 402);
+            groupBox3.Location = new Point(7, 370);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(452, 119);
+            groupBox3.Size = new Size(505, 116);
             groupBox3.TabIndex = 1;
             groupBox3.TabStop = false;
             groupBox3.Text = "Dados da resposta correta - Valor exatamente igual a alternativa correta";
@@ -258,7 +304,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Century", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(7, 20);
+            label7.Location = new Point(7, 22);
             label7.Name = "label7";
             label7.Size = new Size(78, 16);
             label7.TabIndex = 1;
@@ -268,45 +314,309 @@
             // 
             txbResposta.Location = new Point(7, 41);
             txbResposta.Name = "txbResposta";
-            txbResposta.Size = new Size(423, 69);
+            txbResposta.Size = new Size(480, 69);
             txbResposta.TabIndex = 0;
             txbResposta.Text = "";
             // 
-            // btnCancelar
+            // abaPesquisa
             // 
-            btnCancelar.Font = new Font("Century", 12F);
-            btnCancelar.Image = (Image)resources.GetObject("btnCancelar.Image");
-            btnCancelar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCancelar.Location = new Point(688, 444);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(127, 37);
-            btnCancelar.TabIndex = 5;
-            btnCancelar.Text = "CANCELAR";
-            btnCancelar.TextAlign = ContentAlignment.MiddleRight;
-            btnCancelar.UseVisualStyleBackColor = true;
+            abaPesquisa.Controls.Add(btnPesquisaUser);
+            abaPesquisa.Controls.Add(txbPesquisaPergunta);
+            abaPesquisa.Controls.Add(txtPergunta);
+            abaPesquisa.Controls.Add(dataGridViewPergunta);
+            abaPesquisa.Location = new Point(4, 30);
+            abaPesquisa.Name = "abaPesquisa";
+            abaPesquisa.Padding = new Padding(3);
+            abaPesquisa.Size = new Size(858, 492);
+            abaPesquisa.TabIndex = 1;
+            abaPesquisa.Text = "PESQUISAR";
+            abaPesquisa.UseVisualStyleBackColor = true;
             // 
-            // btnCadastrar
+            // btnPesquisaUser
             // 
-            btnCadastrar.Font = new Font("Century", 12F);
-            btnCadastrar.Image = (Image)resources.GetObject("btnCadastrar.Image");
-            btnCadastrar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCadastrar.Location = new Point(495, 444);
-            btnCadastrar.Name = "btnCadastrar";
-            btnCadastrar.Size = new Size(137, 37);
-            btnCadastrar.TabIndex = 4;
-            btnCadastrar.Text = "CADASTRAR";
-            btnCadastrar.TextAlign = ContentAlignment.MiddleRight;
-            btnCadastrar.UseVisualStyleBackColor = true;
-            btnCadastrar.Click += novaPergunta;
+            btnPesquisaUser.BackColor = Color.DarkGray;
+            btnPesquisaUser.Image = (Image)resources.GetObject("btnPesquisaUser.Image");
+            btnPesquisaUser.ImageAlign = ContentAlignment.MiddleLeft;
+            btnPesquisaUser.Location = new Point(724, 25);
+            btnPesquisaUser.Name = "btnPesquisaUser";
+            btnPesquisaUser.Size = new Size(119, 35);
+            btnPesquisaUser.TabIndex = 13;
+            btnPesquisaUser.Text = "BUSCAR";
+            btnPesquisaUser.TextAlign = ContentAlignment.MiddleRight;
+            btnPesquisaUser.UseVisualStyleBackColor = false;
+            btnPesquisaUser.Click += listaPerguntas;
+            // 
+            // txbPesquisaPergunta
+            // 
+            txbPesquisaPergunta.BorderStyle = BorderStyle.FixedSingle;
+            txbPesquisaPergunta.Location = new Point(108, 25);
+            txbPesquisaPergunta.Multiline = true;
+            txbPesquisaPergunta.Name = "txbPesquisaPergunta";
+            txbPesquisaPergunta.Size = new Size(597, 35);
+            txbPesquisaPergunta.TabIndex = 12;
+            // 
+            // txtPergunta
+            // 
+            txtPergunta.AutoSize = true;
+            txtPergunta.Location = new Point(11, 32);
+            txtPergunta.Name = "txtPergunta";
+            txtPergunta.Size = new Size(91, 21);
+            txtPergunta.TabIndex = 11;
+            txtPergunta.Text = "PERGUNTA:";
+            // 
+            // dataGridViewPergunta
+            // 
+            dataGridViewPergunta.AllowUserToAddRows = false;
+            dataGridViewPergunta.AllowUserToDeleteRows = false;
+            dataGridViewPergunta.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewPergunta.BackgroundColor = SystemColors.ButtonHighlight;
+            dataGridViewPergunta.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewPergunta.Columns.AddRange(new DataGridViewColumn[] { ColumnID, ColumnPergunta, ColumnResposta, ColumnCategoria });
+            dataGridViewPergunta.Location = new Point(11, 77);
+            dataGridViewPergunta.Name = "dataGridViewPergunta";
+            dataGridViewPergunta.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewPergunta.Size = new Size(832, 403);
+            dataGridViewPergunta.TabIndex = 0;
+            dataGridViewPergunta.CellClick += selecionaLinha;
+            // 
+            // ColumnID
+            // 
+            ColumnID.HeaderText = "ID";
+            ColumnID.Name = "ColumnID";
+            // 
+            // ColumnPergunta
+            // 
+            ColumnPergunta.HeaderText = "PERGUNTA";
+            ColumnPergunta.Name = "ColumnPergunta";
+            // 
+            // ColumnResposta
+            // 
+            ColumnResposta.HeaderText = "RESPOSTA";
+            ColumnResposta.Name = "ColumnResposta";
+            // 
+            // ColumnCategoria
+            // 
+            ColumnCategoria.HeaderText = "CATEGORIA";
+            ColumnCategoria.Name = "ColumnCategoria";
+            // 
+            // abaEditar
+            // 
+            abaEditar.Controls.Add(groupBox6);
+            abaEditar.Controls.Add(button1);
+            abaEditar.Controls.Add(btnAtualizar);
+            abaEditar.Controls.Add(groupBox5);
+            abaEditar.Controls.Add(groupBox4);
+            abaEditar.Location = new Point(4, 30);
+            abaEditar.Name = "abaEditar";
+            abaEditar.Padding = new Padding(3);
+            abaEditar.Size = new Size(858, 492);
+            abaEditar.TabIndex = 2;
+            abaEditar.Text = "EDITAR";
+            abaEditar.UseVisualStyleBackColor = true;
+            // 
+            // groupBox6
+            // 
+            groupBox6.Controls.Add(label14);
+            groupBox6.Controls.Add(richTextBox6);
+            groupBox6.Location = new Point(5, 370);
+            groupBox6.Name = "groupBox6";
+            groupBox6.Size = new Size(519, 116);
+            groupBox6.TabIndex = 6;
+            groupBox6.TabStop = false;
+            groupBox6.Text = "Dados da resposta correta - Valor exatamente igual a alternativa correta";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new Font("Century", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label14.Location = new Point(7, 22);
+            label14.Name = "label14";
+            label14.Size = new Size(78, 16);
+            label14.TabIndex = 1;
+            label14.Text = "RESPOSTA";
+            // 
+            // richTextBox6
+            // 
+            richTextBox6.Location = new Point(7, 41);
+            richTextBox6.Name = "richTextBox6";
+            richTextBox6.Size = new Size(480, 69);
+            richTextBox6.TabIndex = 0;
+            richTextBox6.Text = "";
+            // 
+            // button1
+            // 
+            button1.Font = new Font("Century", 12F);
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(719, 411);
+            button1.Name = "button1";
+            button1.Size = new Size(127, 37);
+            button1.TabIndex = 8;
+            button1.Text = "CANCELAR";
+            button1.TextAlign = ContentAlignment.MiddleRight;
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // btnAtualizar
+            // 
+            btnAtualizar.Font = new Font("Century", 12F);
+            btnAtualizar.Image = (Image)resources.GetObject("btnAtualizar.Image");
+            btnAtualizar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAtualizar.Location = new Point(542, 411);
+            btnAtualizar.Name = "btnAtualizar";
+            btnAtualizar.Size = new Size(137, 37);
+            btnAtualizar.TabIndex = 7;
+            btnAtualizar.Text = "ATUALIZAR";
+            btnAtualizar.TextAlign = ContentAlignment.MiddleRight;
+            btnAtualizar.UseVisualStyleBackColor = true;
+            btnAtualizar.Click += atualizaPerguntas;
+            // 
+            // groupBox5
+            // 
+            groupBox5.Controls.Add(label10);
+            groupBox5.Controls.Add(richTextBox2);
+            groupBox5.Controls.Add(label11);
+            groupBox5.Controls.Add(richTextBox3);
+            groupBox5.Controls.Add(label12);
+            groupBox5.Controls.Add(richTextBox4);
+            groupBox5.Controls.Add(label13);
+            groupBox5.Controls.Add(richTextBox5);
+            groupBox5.Location = new Point(5, 138);
+            groupBox5.Name = "groupBox5";
+            groupBox5.Size = new Size(848, 217);
+            groupBox5.TabIndex = 2;
+            groupBox5.TabStop = false;
+            groupBox5.Text = "Dados das Alternativas:";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label10.Location = new Point(508, 113);
+            label10.Name = "label10";
+            label10.Size = new Size(127, 21);
+            label10.TabIndex = 9;
+            label10.Text = "ALTERNATIVA 04";
+            // 
+            // richTextBox2
+            // 
+            richTextBox2.Location = new Point(508, 136);
+            richTextBox2.Name = "richTextBox2";
+            richTextBox2.Size = new Size(323, 55);
+            richTextBox2.TabIndex = 8;
+            richTextBox2.Text = "";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label11.Location = new Point(17, 113);
+            label11.Name = "label11";
+            label11.Size = new Size(127, 21);
+            label11.TabIndex = 7;
+            label11.Text = "ALTERNATIVA 03";
+            // 
+            // richTextBox3
+            // 
+            richTextBox3.Location = new Point(17, 136);
+            richTextBox3.Name = "richTextBox3";
+            richTextBox3.Size = new Size(323, 55);
+            richTextBox3.TabIndex = 6;
+            richTextBox3.Text = "";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label12.Location = new Point(508, 22);
+            label12.Name = "label12";
+            label12.Size = new Size(127, 21);
+            label12.TabIndex = 5;
+            label12.Text = "ALTERNATIVA 02";
+            // 
+            // richTextBox4
+            // 
+            richTextBox4.Location = new Point(508, 45);
+            richTextBox4.Name = "richTextBox4";
+            richTextBox4.Size = new Size(323, 55);
+            richTextBox4.TabIndex = 4;
+            richTextBox4.Text = "";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label13.Location = new Point(17, 22);
+            label13.Name = "label13";
+            label13.Size = new Size(127, 21);
+            label13.TabIndex = 3;
+            label13.Text = "ALTERNATIVA 01";
+            // 
+            // richTextBox5
+            // 
+            richTextBox5.Location = new Point(17, 45);
+            richTextBox5.Name = "richTextBox5";
+            richTextBox5.Size = new Size(323, 55);
+            richTextBox5.TabIndex = 2;
+            richTextBox5.Text = "";
+            // 
+            // groupBox4
+            // 
+            groupBox4.Controls.Add(label8);
+            groupBox4.Controls.Add(comboBox2);
+            groupBox4.Controls.Add(label9);
+            groupBox4.Controls.Add(richTextBox1);
+            groupBox4.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            groupBox4.Location = new Point(5, 15);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Size = new Size(847, 127);
+            groupBox4.TabIndex = 1;
+            groupBox4.TabStop = false;
+            groupBox4.Text = "Dados da Pergunta:";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.Location = new Point(618, 20);
+            label8.Name = "label8";
+            label8.Size = new Size(92, 21);
+            label8.TabIndex = 3;
+            label8.Text = "CATEGORIA";
+            // 
+            // comboBox2
+            // 
+            comboBox2.BackColor = SystemColors.Window;
+            comboBox2.Font = new Font("Century", 12F);
+            comboBox2.ForeColor = SystemColors.WindowText;
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(623, 43);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(218, 28);
+            comboBox2.TabIndex = 2;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Location = new Point(6, 20);
+            label9.Name = "label9";
+            label9.Size = new Size(88, 21);
+            label9.TabIndex = 1;
+            label9.Text = "PERGUNTA";
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.Location = new Point(6, 43);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(603, 73);
+            richTextBox1.TabIndex = 0;
+            richTextBox1.Text = "";
             // 
             // Pergunta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(871, 524);
-            Controls.Add(btnCancelar);
-            Controls.Add(btnCadastrar);
-            Controls.Add(groupBox3);
             Controls.Add(tabPerguntas);
             Name = "Pergunta";
             Text = "FORMULÁRIO DE CONTROLE DE PERGUNTAS";
@@ -319,6 +629,16 @@
             groupBox1.PerformLayout();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
+            abaPesquisa.ResumeLayout(false);
+            abaPesquisa.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPergunta).EndInit();
+            abaEditar.ResumeLayout(false);
+            groupBox6.ResumeLayout(false);
+            groupBox6.PerformLayout();
+            groupBox5.ResumeLayout(false);
+            groupBox5.PerformLayout();
+            groupBox4.ResumeLayout(false);
+            groupBox4.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -347,5 +667,32 @@
         private Label label7;
         private Button btnCancelar;
         private Button btnCadastrar;
+        private DataGridView dataGridViewPergunta;
+        private Button btnPesquisaUser;
+        private TextBox txbPesquisaPergunta;
+        private Label txtPergunta;
+        private GroupBox groupBox4;
+        private Label label8;
+        private ComboBox comboBox2;
+        private Label label9;
+        private RichTextBox richTextBox1;
+        private GroupBox groupBox6;
+        private Label label14;
+        private RichTextBox richTextBox6;
+        private Button button1;
+        private Button btnAtualizar;
+        private GroupBox groupBox5;
+        private Label label10;
+        private RichTextBox richTextBox2;
+        private Label label11;
+        private RichTextBox richTextBox3;
+        private Label label12;
+        private RichTextBox richTextBox4;
+        private Label label13;
+        private RichTextBox richTextBox5;
+        private DataGridViewTextBoxColumn ColumnID;
+        private DataGridViewTextBoxColumn ColumnPergunta;
+        private DataGridViewTextBoxColumn ColumnResposta;
+        private DataGridViewTextBoxColumn ColumnCategoria;
     }
 }

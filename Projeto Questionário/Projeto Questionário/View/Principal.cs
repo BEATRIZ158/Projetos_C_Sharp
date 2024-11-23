@@ -78,5 +78,11 @@ namespace Projeto_Questionário
             }
             #endregion
         }
+
+        private void formQuestionario(object sender, EventArgs e)
+        {
+            Questionario frm = new Questionario();
+            frm.ShowDialog();
+        }
     }
 }
