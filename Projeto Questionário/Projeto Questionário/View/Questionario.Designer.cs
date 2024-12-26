@@ -250,6 +250,7 @@
             btnGravar.TabIndex = 2;
             btnGravar.Text = "GRAVAR RESULTADO";
             btnGravar.UseVisualStyleBackColor = true;
+            btnGravar.Click += gravarPontuacao;
             // 
             // btnVerificar
             // 

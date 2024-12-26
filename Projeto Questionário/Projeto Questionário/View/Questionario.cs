@@ -61,6 +61,7 @@ namespace Projeto_Questionário.View
         private void proximaPergunta(object sender, EventArgs e)
         {
             btnIniciar.Text = "PRÓXIMA PERGUNTA";
+            btnIniciar.Enabled = false;
             if (perguntas.Read())
             {
                 //Carregar a pergunta nos campos de texto
@@ -83,13 +84,15 @@ namespace Projeto_Questionário.View
 
         private void verificarResposta(object sender, EventArgs e)
         {
+            btnIniciar.Enabled = true;
+            btnVerificar.Enabled = false;
             numeroPerguntas++;
             lbNumPerguntas.Text = numeroPerguntas.ToString();
 
             // Armazena na variavel resposta a opção escolhida pelo usuário
             string resposta;
-            if(rbAlter1.Checked)
-            { 
+            if (rbAlter1.Checked)
+            {
                 resposta = txbAlter1.Text;
             }
             else if (rbAlter2.Checked)
@@ -100,12 +103,13 @@ namespace Projeto_Questionário.View
             {
                 resposta = txbAlter3.Text;
             }
-            else{
+            else
+            {
                 resposta = txbAlter4.Text;
             }
 
             //compara se a alternativa é igual a resposta correta
-            if(resposta == perguntas.GetValue(6).ToString())
+            if (resposta == perguntas.GetValue(6).ToString())
             {
                 acertos++;
                 lbNumAcertos.Text = acertos.ToString();
@@ -115,6 +119,22 @@ namespace Projeto_Questionário.View
             {
                 MessageBox.Show("ERROU!");
             }
+        }
+
+        private void gravarPontuacao(object sender, EventArgs e)
+        {
+            modelPontuacao mPontuacao = new modelPontuacao();
+            controllerPontuacao cPontuacao = new controllerPontuacao();
+
+            // Acessar o texto do Label e convertê-lo para inteiro
+            mPontuacao.IdUsuario = controleLogin.idUsuario;
+            mPontuacao.TotalAcertos = int.Parse(lbNumAcertos.Text); // Conversão do texto do Label para int
+            mPontuacao.TotalErros = int.Parse(lbNumPerguntas.Text) - mPontuacao.TotalAcertos;
+            mPontuacao.DataTentativa = DateTime.Now;
+
+            string res = cPontuacao.gravarPontuacao(mPontuacao);
+            MessageBox.Show(res);
+            btnGravar.Enabled = false;
         }
     }
 }

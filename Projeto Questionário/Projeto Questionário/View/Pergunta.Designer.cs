@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pergunta));
-            tabPerguntas = new TabControl();
+            tabPergunta = new TabControl();
             abaCadastro = new TabPage();
             btnCancelar = new Button();
             btnCadastrar = new Button();
@@ -62,24 +62,24 @@
             abaEditar = new TabPage();
             groupBox6 = new GroupBox();
             label14 = new Label();
-            richTextBox6 = new RichTextBox();
+            rtbEditarResposta = new RichTextBox();
             button1 = new Button();
             btnAtualizar = new Button();
             groupBox5 = new GroupBox();
             label10 = new Label();
-            richTextBox2 = new RichTextBox();
+            rtbEditarAlter4 = new RichTextBox();
             label11 = new Label();
-            richTextBox3 = new RichTextBox();
+            rtbEditarAlter3 = new RichTextBox();
             label12 = new Label();
-            richTextBox4 = new RichTextBox();
+            rtbEditarAlter2 = new RichTextBox();
             label13 = new Label();
-            richTextBox5 = new RichTextBox();
+            rtbEditarAlter1 = new RichTextBox();
             groupBox4 = new GroupBox();
             label8 = new Label();
-            comboBox2 = new ComboBox();
+            comboBoxEditarCategoria = new ComboBox();
             label9 = new Label();
-            richTextBox1 = new RichTextBox();
-            tabPerguntas.SuspendLayout();
+            rtbEditarPergunta = new RichTextBox();
+            tabPergunta.SuspendLayout();
             abaCadastro.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -92,17 +92,17 @@
             groupBox4.SuspendLayout();
             SuspendLayout();
             // 
-            // tabPerguntas
+            // tabPergunta
             // 
-            tabPerguntas.Controls.Add(abaCadastro);
-            tabPerguntas.Controls.Add(abaPesquisa);
-            tabPerguntas.Controls.Add(abaEditar);
-            tabPerguntas.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tabPerguntas.Location = new Point(1, 2);
-            tabPerguntas.Name = "tabPerguntas";
-            tabPerguntas.SelectedIndex = 0;
-            tabPerguntas.Size = new Size(866, 526);
-            tabPerguntas.TabIndex = 0;
+            tabPergunta.Controls.Add(abaCadastro);
+            tabPergunta.Controls.Add(abaPesquisa);
+            tabPergunta.Controls.Add(abaEditar);
+            tabPergunta.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tabPergunta.Location = new Point(1, 2);
+            tabPergunta.Name = "tabPergunta";
+            tabPergunta.SelectedIndex = 0;
+            tabPergunta.Size = new Size(866, 526);
+            tabPergunta.TabIndex = 0;
             // 
             // abaCadastro
             // 
@@ -417,7 +417,7 @@
             // groupBox6
             // 
             groupBox6.Controls.Add(label14);
-            groupBox6.Controls.Add(richTextBox6);
+            groupBox6.Controls.Add(rtbEditarResposta);
             groupBox6.Location = new Point(5, 370);
             groupBox6.Name = "groupBox6";
             groupBox6.Size = new Size(519, 116);
@@ -435,13 +435,13 @@
             label14.TabIndex = 1;
             label14.Text = "RESPOSTA";
             // 
-            // richTextBox6
+            // rtbEditarResposta
             // 
-            richTextBox6.Location = new Point(7, 41);
-            richTextBox6.Name = "richTextBox6";
-            richTextBox6.Size = new Size(480, 69);
-            richTextBox6.TabIndex = 0;
-            richTextBox6.Text = "";
+            rtbEditarResposta.Location = new Point(7, 41);
+            rtbEditarResposta.Name = "rtbEditarResposta";
+            rtbEditarResposta.Size = new Size(480, 69);
+            rtbEditarResposta.TabIndex = 0;
+            rtbEditarResposta.Text = "";
             // 
             // button1
             // 
@@ -473,13 +473,13 @@
             // groupBox5
             // 
             groupBox5.Controls.Add(label10);
-            groupBox5.Controls.Add(richTextBox2);
+            groupBox5.Controls.Add(rtbEditarAlter4);
             groupBox5.Controls.Add(label11);
-            groupBox5.Controls.Add(richTextBox3);
+            groupBox5.Controls.Add(rtbEditarAlter3);
             groupBox5.Controls.Add(label12);
-            groupBox5.Controls.Add(richTextBox4);
+            groupBox5.Controls.Add(rtbEditarAlter2);
             groupBox5.Controls.Add(label13);
-            groupBox5.Controls.Add(richTextBox5);
+            groupBox5.Controls.Add(rtbEditarAlter1);
             groupBox5.Location = new Point(5, 138);
             groupBox5.Name = "groupBox5";
             groupBox5.Size = new Size(848, 217);
@@ -497,13 +497,13 @@
             label10.TabIndex = 9;
             label10.Text = "ALTERNATIVA 04";
             // 
-            // richTextBox2
+            // rtbEditarAlter4
             // 
-            richTextBox2.Location = new Point(508, 136);
-            richTextBox2.Name = "richTextBox2";
-            richTextBox2.Size = new Size(323, 55);
-            richTextBox2.TabIndex = 8;
-            richTextBox2.Text = "";
+            rtbEditarAlter4.Location = new Point(508, 136);
+            rtbEditarAlter4.Name = "rtbEditarAlter4";
+            rtbEditarAlter4.Size = new Size(323, 55);
+            rtbEditarAlter4.TabIndex = 8;
+            rtbEditarAlter4.Text = "";
             // 
             // label11
             // 
@@ -515,13 +515,13 @@
             label11.TabIndex = 7;
             label11.Text = "ALTERNATIVA 03";
             // 
-            // richTextBox3
+            // rtbEditarAlter3
             // 
-            richTextBox3.Location = new Point(17, 136);
-            richTextBox3.Name = "richTextBox3";
-            richTextBox3.Size = new Size(323, 55);
-            richTextBox3.TabIndex = 6;
-            richTextBox3.Text = "";
+            rtbEditarAlter3.Location = new Point(17, 136);
+            rtbEditarAlter3.Name = "rtbEditarAlter3";
+            rtbEditarAlter3.Size = new Size(323, 55);
+            rtbEditarAlter3.TabIndex = 6;
+            rtbEditarAlter3.Text = "";
             // 
             // label12
             // 
@@ -533,13 +533,13 @@
             label12.TabIndex = 5;
             label12.Text = "ALTERNATIVA 02";
             // 
-            // richTextBox4
+            // rtbEditarAlter2
             // 
-            richTextBox4.Location = new Point(508, 45);
-            richTextBox4.Name = "richTextBox4";
-            richTextBox4.Size = new Size(323, 55);
-            richTextBox4.TabIndex = 4;
-            richTextBox4.Text = "";
+            rtbEditarAlter2.Location = new Point(508, 45);
+            rtbEditarAlter2.Name = "rtbEditarAlter2";
+            rtbEditarAlter2.Size = new Size(323, 55);
+            rtbEditarAlter2.TabIndex = 4;
+            rtbEditarAlter2.Text = "";
             // 
             // label13
             // 
@@ -551,20 +551,20 @@
             label13.TabIndex = 3;
             label13.Text = "ALTERNATIVA 01";
             // 
-            // richTextBox5
+            // rtbEditarAlter1
             // 
-            richTextBox5.Location = new Point(17, 45);
-            richTextBox5.Name = "richTextBox5";
-            richTextBox5.Size = new Size(323, 55);
-            richTextBox5.TabIndex = 2;
-            richTextBox5.Text = "";
+            rtbEditarAlter1.Location = new Point(17, 45);
+            rtbEditarAlter1.Name = "rtbEditarAlter1";
+            rtbEditarAlter1.Size = new Size(323, 55);
+            rtbEditarAlter1.TabIndex = 2;
+            rtbEditarAlter1.Text = "";
             // 
             // groupBox4
             // 
             groupBox4.Controls.Add(label8);
-            groupBox4.Controls.Add(comboBox2);
+            groupBox4.Controls.Add(comboBoxEditarCategoria);
             groupBox4.Controls.Add(label9);
-            groupBox4.Controls.Add(richTextBox1);
+            groupBox4.Controls.Add(rtbEditarPergunta);
             groupBox4.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             groupBox4.Location = new Point(5, 15);
             groupBox4.Name = "groupBox4";
@@ -583,16 +583,16 @@
             label8.TabIndex = 3;
             label8.Text = "CATEGORIA";
             // 
-            // comboBox2
+            // comboBoxEditarCategoria
             // 
-            comboBox2.BackColor = SystemColors.Window;
-            comboBox2.Font = new Font("Century", 12F);
-            comboBox2.ForeColor = SystemColors.WindowText;
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(623, 43);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(218, 28);
-            comboBox2.TabIndex = 2;
+            comboBoxEditarCategoria.BackColor = SystemColors.Window;
+            comboBoxEditarCategoria.Font = new Font("Century", 12F);
+            comboBoxEditarCategoria.ForeColor = SystemColors.WindowText;
+            comboBoxEditarCategoria.FormattingEnabled = true;
+            comboBoxEditarCategoria.Location = new Point(623, 43);
+            comboBoxEditarCategoria.Name = "comboBoxEditarCategoria";
+            comboBoxEditarCategoria.Size = new Size(218, 28);
+            comboBoxEditarCategoria.TabIndex = 2;
             // 
             // label9
             // 
@@ -604,24 +604,24 @@
             label9.TabIndex = 1;
             label9.Text = "PERGUNTA";
             // 
-            // richTextBox1
+            // rtbEditarPergunta
             // 
-            richTextBox1.Location = new Point(6, 43);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(603, 73);
-            richTextBox1.TabIndex = 0;
-            richTextBox1.Text = "";
+            rtbEditarPergunta.Location = new Point(6, 43);
+            rtbEditarPergunta.Name = "rtbEditarPergunta";
+            rtbEditarPergunta.Size = new Size(603, 73);
+            rtbEditarPergunta.TabIndex = 0;
+            rtbEditarPergunta.Text = "";
             // 
             // Pergunta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(871, 524);
-            Controls.Add(tabPerguntas);
+            Controls.Add(tabPergunta);
             Name = "Pergunta";
             Text = "FORMULÁRIO DE CONTROLE DE PERGUNTAS";
             Load += configForm;
-            tabPerguntas.ResumeLayout(false);
+            tabPergunta.ResumeLayout(false);
             abaCadastro.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
@@ -644,7 +644,7 @@
 
         #endregion
 
-        private TabControl tabPerguntas;
+        private TabControl tabPergunta;
         private TabPage abaCadastro;
         private TabPage abaPesquisa;
         private TabPage abaEditar;
@@ -673,23 +673,23 @@
         private Label txtPergunta;
         private GroupBox groupBox4;
         private Label label8;
-        private ComboBox comboBox2;
+        private ComboBox comboBoxEditarCategoria;
         private Label label9;
-        private RichTextBox richTextBox1;
+        private RichTextBox rtbEditarPergunta;
         private GroupBox groupBox6;
         private Label label14;
-        private RichTextBox richTextBox6;
+        private RichTextBox rtbEditarResposta;
         private Button button1;
         private Button btnAtualizar;
         private GroupBox groupBox5;
         private Label label10;
-        private RichTextBox richTextBox2;
+        private RichTextBox rtbEditarAlter4;
         private Label label11;
-        private RichTextBox richTextBox3;
+        private RichTextBox rtbEditarAlter3;
         private Label label12;
-        private RichTextBox richTextBox4;
+        private RichTextBox rtbEditarAlter2;
         private Label label13;
-        private RichTextBox richTextBox5;
+        private RichTextBox rtbEditarAlter1;
         private DataGridViewTextBoxColumn ColumnID;
         private DataGridViewTextBoxColumn ColumnPergunta;
         private DataGridViewTextBoxColumn ColumnResposta;

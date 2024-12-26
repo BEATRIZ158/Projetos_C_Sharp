@@ -212,7 +212,7 @@
             // 
             button1.Image = (Image)resources.GetObject("button1.Image");
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(281, 100);
+            button1.Location = new Point(274, 141);
             button1.Name = "button1";
             button1.Size = new Size(128, 37);
             button1.TabIndex = 7;
@@ -224,7 +224,7 @@
             // 
             btnAtualizaCategoria.Image = (Image)resources.GetObject("btnAtualizaCategoria.Image");
             btnAtualizaCategoria.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAtualizaCategoria.Location = new Point(15, 100);
+            btnAtualizaCategoria.Location = new Point(8, 141);
             btnAtualizaCategoria.Name = "btnAtualizaCategoria";
             btnAtualizaCategoria.Size = new Size(138, 37);
             btnAtualizaCategoria.TabIndex = 6;
@@ -235,16 +235,16 @@
             // 
             // txbEditarCategoria
             // 
-            txbEditarCategoria.Location = new Point(15, 44);
+            txbEditarCategoria.Location = new Point(8, 79);
             txbEditarCategoria.Multiline = true;
             txbEditarCategoria.Name = "txbEditarCategoria";
-            txbEditarCategoria.Size = new Size(394, 31);
+            txbEditarCategoria.Size = new Size(491, 41);
             txbEditarCategoria.TabIndex = 5;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(15, 13);
+            label3.Location = new Point(8, 42);
             label3.Name = "label3";
             label3.Size = new Size(171, 20);
             label3.TabIndex = 4;

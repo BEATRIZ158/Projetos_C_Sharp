@@ -10,12 +10,14 @@ namespace Projeto_Questionário.Model
     {
         private int idTentativa;
         private int idUsuario;
-        private int totalAcerto;
+        private int totalAcertos;
         private DateTime dataTentativa;
+        private int totalErros;
 
         public int IdTentativa { get => idTentativa; set => idTentativa = value; }
         public int IdUsuario { get => idUsuario; set => idUsuario = value; }
-        public int TotalAcerto { get => totalAcerto; set => totalAcerto = value; }
+        public int TotalAcertos { get => totalAcertos; set => totalAcertos = value; }
         public DateTime DataTentativa { get => dataTentativa; set => dataTentativa = value; }
+        public int TotalErros { get => totalErros; set => totalErros = value; }
     }
 }

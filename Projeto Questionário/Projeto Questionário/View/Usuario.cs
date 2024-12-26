@@ -15,9 +15,78 @@ namespace Projeto_Questionário.View
 {
     public partial class Usuario : Form
     {
-        public Usuario()
+        private bool editandoProprioPerfil = false;
+        private bool criarNovoAluno = false;
+        private bool criarNovoProfessor = false;
+
+        public void SetEditandoProprioPerfil(bool valor)
+        {
+            editandoProprioPerfil = valor;
+        }
+
+        // Estado para criar um novo usuário do tipo Aluno
+        public void SetCriarNovoAluno(bool valor)
+        {
+            criarNovoAluno = valor;
+        }
+
+        public void SetCriarNovoAProfessor(bool valor)
+        {
+            criarNovoProfessor = valor;
+        }
+
+        //Métodos públicos para chamar métodos privados
+        public TabControl TabControlUsuario
+        {
+            get { return tabUsuario; } // Retorna o TabUsuario do formulário
+        }
+
+        public enum TipoUsuario
+        {
+            Admin = 1,
+            Aluno = 2,
+            Professor = 3
+        }
+
+        public Usuario(int idUsuario)
         {
             InitializeComponent();
+            CarregarDadosUsuario(idUsuario);
+        }
+
+        private void CarregarDadosUsuario(int idUsuario)
+        {
+            controllerUsuario cUsuario = new controllerUsuario();
+            NpgsqlDataReader dados = cUsuario.ObterUsuarioPorId(idUsuario);
+
+            if (dados != null && dados.Read())
+            {
+                // Preenchendo os campos com os dados retornados
+                txbEditarNomeUser.Text = dados["nomeusuario"].ToString();
+                txbEditarEmail.Text = dados["email"].ToString();
+
+                // Obter o tipo de usuário específico
+                int idTipoUsuario = Convert.ToInt32(dados["idtipousuario"]);
+
+                // Preencher a ComboBox com o tipo de usuário correspondente
+                controllerTipoUsuario cTipoUsuario = new controllerTipoUsuario();
+                NpgsqlDataReader tipoUsuarioDados = cTipoUsuario.ObterTipoUsuarioPorId(controleLogin.idUsuario);
+
+                DataTable tipoUsuarioTabela = new DataTable();
+                tipoUsuarioTabela.Load(tipoUsuarioDados);
+
+                comboBoxTipo1.DataSource = tipoUsuarioTabela;
+                comboBoxTipo1.DisplayMember = "nometipousuario";
+                comboBoxTipo1.ValueMember = "idtipousuario";
+
+                // Definir o valor selecionado
+                comboBoxTipo1.SelectedValue = idTipoUsuario;
+                comboBoxTipo1.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Não foi possível carregar os dados do usuário.");
+            }
         }
 
         //Método para retornar a comboBoxTipo
@@ -54,7 +123,6 @@ namespace Projeto_Questionário.View
             txbEmail.Text = "";
             txbSenhaUser.Text = "";
             txbConfirmarSenha.Text = "";
-
         }
 
         private void listaUsuario(object sender, EventArgs e)
@@ -79,28 +147,55 @@ namespace Projeto_Questionário.View
                 // Limpa a Grid a cada novo SELECT
                 dataGridViewUser.Columns.Clear();
 
-                // Define quantas colunas de dados a Grid terá
-                dataGridViewUser.ColumnCount = usuario.FieldCount;
-
-                // Vetor que irá armazenar temporariamente os dados de uma linha
-                string[] linha = new string[usuario.FieldCount];
+                // Define as colunas que deseja exibir no DataGridView
+                dataGridViewUser.Columns.Add("ID", "ID");
+                dataGridViewUser.Columns.Add("NOME", "NOME");
+                dataGridViewUser.Columns.Add("E-MAIL", "E-MAIL");
+                dataGridViewUser.Columns.Add("TIPO", "TIPO");
 
                 // Usando Laço de repetição para percorrer o DataReader
                 while (usuario.Read())
                 {
-                    if(mUsuario.IdTipoUsuario = 2)
-                    {
+                    // Obtem o tipo de usuário da consulta
+                    int idTipoUsuarioBanco = int.Parse(usuario["idtipousuario"].ToString());
 
-                    }
-                    // Le os dados das colunas do DataReader
-                    for (int i = 0; i < usuario.FieldCount; i++)
+                    // Filtra de acordo com o tipo do usuário logado
+                    if (controleLogin.idTipoUsuario == 3 || criarNovoAluno == true) // Se for Professor
                     {
-                        linha[i] = usuario.IsDBNull(i) ? "" : usuario.GetValue(i).ToString();
+                        if (idTipoUsuarioBanco != 2) // Mostrar apenas Alunos
+                        {
+                            continue; // Ignora registros que não são alunos
+                        }
                     }
-                    // Insere a linha lida na DataGrid
+                    else if(criarNovoProfessor)
+                    {
+                        if (idTipoUsuarioBanco != 3) // Mostrar apenas Professor
+                        {
+                            continue;
+                        }
+                    }
+
+                    // Criar a linha ignorando o campo idtipousuario
+                    string[] linha = new string[]
+                    {
+                        usuario["idusuario"].ToString(),      // ID
+                        usuario["nomeusuario"].ToString(),   // Nome
+                        usuario["email"].ToString(),         // Email
+                        usuario["nometipousuario"].ToString()// Tipo (Nome do Tipo)
+                    };
+
+                    // Insere a linha na DataGrid
                     dataGridViewUser.Rows.Add(linha);
                 }
             }
+        }
+
+        //Função para limpar o EditarUsuário
+        public void LimparUsuario()
+        {
+            txbEditarNomeUser.Text = "";
+            txbEditarEmail.Text = "";
+            comboBoxTipo1.DataSource = null;
         }
 
         private void configFormUsuario(object sender, EventArgs e)
@@ -121,17 +216,23 @@ namespace Projeto_Questionário.View
             //desabilita a combobox se o usuário não for admin
             if (controleLogin.idTipoUsuario > 1)
             {
-                //Oculta a combo box
-                //labelTipo.Visible = false;
-                //comboBoxTipo.Visible = false;
-
                 //se o usuário for professor
-                if (controleLogin.idTipoUsuario == 3)
+                if (controleLogin.idTipoUsuario == (int)TipoUsuario.Professor)
                 {
                     //define que o tipo de novo usuário será ALUNO (2)
                     comboBoxTipo.SelectedIndex = 1;
                     comboBoxTipo.Enabled = false;//Deixa vísivel mas desabilitado
                 }
+            }
+            if (criarNovoAluno)
+            {
+                comboBoxTipo.SelectedIndex = 1;
+                comboBoxTipo.Enabled = false;
+            }
+            else if(criarNovoProfessor)
+            {
+                comboBoxTipo.SelectedIndex = 2;
+                comboBoxTipo.Enabled = false;
             }
         }
 
@@ -177,54 +278,74 @@ namespace Projeto_Questionário.View
                 txbEditarEmail.Text =
                     dataGridViewUser.CurrentRow.Cells[2].Value.ToString();
 
+                string tipoUsuario = dataGridViewUser.CurrentRow.Cells[3].Value.ToString();
+
+                //Converte o texto para o enum
+                if (Enum.TryParse<TipoUsuario>(tipoUsuario, out TipoUsuario tipoEnum))
+                {
+                    comboBoxTipo1.SelectedValue = (int) tipoEnum;
+                    if(controleLogin.idTipoUsuario == (int)TipoUsuario.Admin)
+                    {
+                        comboBoxTipo1.Enabled = true;
+                    }
+                    else
+                    {
+                        comboBoxTipo1.Enabled = false;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Tipo de usuário inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
                 //Seleciona o tabPage especificado
                 tabUsuario.SelectedTab = tabEditar;
             }
         }
 
-        private void atualizaUsuario(object sender, EventArgs e)
+        public void AtualizarUsuario(object sender, EventArgs e)
         {
             modelUsuario mUsuario = new modelUsuario();
             controllerUsuario cUsuario = new controllerUsuario();
 
+            if (editandoProprioPerfil)
+            {
+                mUsuario.IdUsuario = controleLogin.idUsuario; // ID do próprio usuário
+            }
+            else
+            {
+                if (dataGridViewUser.CurrentRow == null)
+                {
+                    MessageBox.Show("Selecione um usuário na lista para atualizar.");
+                    return;
+                }
+                mUsuario.IdUsuario = Convert.ToInt32(dataGridViewUser.CurrentRow.Cells[0].Value);
+
+            }
+
+            // Preenche os outros campos
             mUsuario.NomeUsuario = txbEditarNomeUser.Text;
             mUsuario.Email = txbEditarEmail.Text;
             mUsuario.Senha = txbEditarSenha.Text;
             mUsuario.IdTipoUsuario = Convert.ToInt32(comboBoxTipo1.SelectedValue);
-            mUsuario.IdUsuario = idusuario;
 
-            string res = cUsuario.atualizaUsuarios(mUsuario);
-
-            MessageBox.Show(res);
-        }
-
-        private void AtualizarUsuario(object sender, EventArgs e)
-        {
-            // Criando uma nova instância de objeto da classe modelUsuario, para usar seus atributos
-            modelUsuario mUsuario = new modelUsuario();
-            controllerUsuario cUsuario = new controllerUsuario();
-
-            mUsuario.NomeUsuario = txbEditarNomeUser.Text;
-            mUsuario.Email = txbEditarEmail.Text;
-            mUsuario.Senha = txbEditarSenha.Text;
-            mUsuario.IdTipoUsuario = Convert.ToInt32(comboBoxTipo1.SelectedValue);
-
-            // Verificar se as senhas coincidem antes de continuar
+            // Validação de senha
             if (txbEditarSenha.Text != txbEditarConfir.Text)
             {
                 MessageBox.Show("As senhas precisam ser iguais!");
                 return;
             }
 
-            // Se as senhas forem iguais, prossegue com o cadastro
-            string res = cUsuario.atualizaUsuarios(mUsuario);
-            MessageBox.Show(res);
+            // Atualização
+            string resultado = cUsuario.atualizaUsuarios(mUsuario);
+            MessageBox.Show(resultado);
 
+            // Limpa os campos e reseta o alerta
             txbEditarNomeUser.Text = "";
             txbEditarEmail.Text = "";
             txbEditarSenha.Text = "";
             txbEditarConfir.Text = "";
-
+            editandoProprioPerfil = false; // Reseta o estado
         }
     }
 }

@@ -48,7 +48,7 @@
             novoAluno = new ToolStripButton();
             novoProfessor = new ToolStripButton();
             novaPergunta = new ToolStripButton();
-            toolStripButton1 = new ToolStripButton();
+            verDesempenho = new ToolStripButton();
             novoQuestionario = new ToolStripButton();
             menuStrip1.SuspendLayout();
             toolStrip1.SuspendLayout();
@@ -97,6 +97,7 @@
             novoUsuario.ShortcutKeys = Keys.Control | Keys.U;
             novoUsuario.Size = new Size(241, 24);
             novoUsuario.Text = "&USUARIO";
+            novoUsuario.Click += formQualquerUsuario;
             // 
             // menuEditar
             // 
@@ -129,6 +130,7 @@
             editarUsuario.ShortcutKeys = Keys.Alt | Keys.U;
             editarUsuario.Size = new Size(234, 24);
             editarUsuario.Text = "&USUARIO";
+            editarUsuario.Click += formEditarUsuario;
             // 
             // menuPesquisar
             // 
@@ -160,6 +162,7 @@
             pesqPontuacao.ShortcutKeys = Keys.F8;
             pesqPontuacao.Size = new Size(215, 24);
             pesqPontuacao.Text = "P&ONTUAÇÃO";
+            pesqPontuacao.Click += formDesempenho;
             // 
             // pesqUsuario
             // 
@@ -172,7 +175,7 @@
             // toolStrip1
             // 
             toolStrip1.Dock = DockStyle.Left;
-            toolStrip1.Items.AddRange(new ToolStripItem[] { verPontos, novoAluno, novoProfessor, novaPergunta, toolStripButton1 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { verPontos, novoAluno, novoProfessor, novaPergunta, verDesempenho });
             toolStrip1.Location = new Point(0, 30);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(89, 478);
@@ -215,7 +218,7 @@
             novoProfessor.Text = "NOVO";
             novoProfessor.TextAlign = ContentAlignment.BottomCenter;
             novoProfessor.TextImageRelation = TextImageRelation.ImageAboveText;
-            novoProfessor.Click += formUsuario;
+            novoProfessor.Click += formUsuarioProfe;
             // 
             // novaPergunta
             // 
@@ -231,16 +234,17 @@
             novaPergunta.ToolTipText = "NOVA";
             novaPergunta.Click += formPergunta;
             // 
-            // toolStripButton1
+            // verDesempenho
             // 
-            toolStripButton1.Image = (Image)resources.GetObject("toolStripButton1.Image");
-            toolStripButton1.ImageScaling = ToolStripItemImageScaling.None;
-            toolStripButton1.ImageTransparentColor = Color.Magenta;
-            toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new Size(86, 83);
-            toolStripButton1.Text = "DESEMPENHO";
-            toolStripButton1.TextAlign = ContentAlignment.BottomCenter;
-            toolStripButton1.TextImageRelation = TextImageRelation.ImageAboveText;
+            verDesempenho.Image = (Image)resources.GetObject("verDesempenho.Image");
+            verDesempenho.ImageScaling = ToolStripItemImageScaling.None;
+            verDesempenho.ImageTransparentColor = Color.Magenta;
+            verDesempenho.Name = "verDesempenho";
+            verDesempenho.Size = new Size(86, 83);
+            verDesempenho.Text = "DESEMPENHO";
+            verDesempenho.TextAlign = ContentAlignment.BottomCenter;
+            verDesempenho.TextImageRelation = TextImageRelation.ImageAboveText;
+            verDesempenho.Click += formDesempenho;
             // 
             // novoQuestionario
             // 
@@ -301,6 +305,6 @@
         private ToolStripButton novoProfessor;
         private ToolStripButton novaPergunta;
         private ToolStripButton verPontos;
-        private ToolStripButton toolStripButton1;
+        private ToolStripButton verDesempenho;
     }
 }

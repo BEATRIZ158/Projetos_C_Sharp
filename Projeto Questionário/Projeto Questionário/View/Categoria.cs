@@ -51,29 +51,27 @@ namespace Projeto_Questionário.View
             modelCategoria mCategoria = new modelCategoria();
             controllerCategoria cCategoria = new controllerCategoria();
 
-            //Passando o nome da categoria digitada no campo de texto
-            mCategoria.NomeCategoria = txbPesquisaCategoria.Text.ToUpper() + "%";
+            // Passando o nome da categoria digitada no campo de texto (sem concatenar '%')
+            mCategoria.NomeCategoria = txbPesquisaCategoria.Text.ToUpper();
 
             // Executa a listagem e armazena no objeto categoria
             NpgsqlDataReader categoria = cCategoria.listaCategorias(mCategoria);
 
             // Configurar e exibir o resultado na DataGridView
-            if (categoria.HasRows)
+            if (categoria != null && categoria.HasRows)
             {
                 // Limpa a Grid a cada novo SELECT
                 dataGridView1.Columns.Clear();
 
-                // Define quantas colnas de dados a Grid terá
+                // Define quantas colunas de dados a Grid terá
                 dataGridView1.ColumnCount = categoria.FieldCount;
 
                 // Vetor que irá armazenar temporariamente os dados de uma linha
-                // propriedade FieldCount -> Retorna a qtd de colunas no DataReader
                 string[] linha = new string[categoria.FieldCount];
 
                 // Usando Laço de repetição para percorrer o DataReader de categorias(categoria) enquanto tiver registros
                 while (categoria.Read())
                 {
-                    // Le os dados das colunas do DataReader
                     for (int i = 0; i < categoria.FieldCount; i++)
                     {
                         linha[i] = categoria.GetValue(i).ToString();
@@ -83,6 +81,7 @@ namespace Projeto_Questionário.View
                 }
             }
         }
+
 
         private void selecionaLinha(object sender, DataGridViewCellEventArgs e)
         {
@@ -98,6 +97,8 @@ namespace Projeto_Questionário.View
                 idcategoria = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
                 txbEditarCategoria.Text =
                     dataGridView1.CurrentRow.Cells[1].Value.ToString();
+
+
 
                 //Seleciona o tabPage especificado
                 tabCategoria.SelectedTab = abaEditar;

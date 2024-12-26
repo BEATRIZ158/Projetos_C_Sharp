@@ -306,9 +306,10 @@
             // txtUser
             // 
             txtUser.AutoSize = true;
+            txtUser.Font = new Font("Segoe UI", 12F);
             txtUser.Location = new Point(15, 23);
             txtUser.Name = "txtUser";
-            txtUser.Size = new Size(92, 20);
+            txtUser.Size = new Size(80, 21);
             txtUser.TabIndex = 8;
             txtUser.Text = "USUÁRIO:";
             // 
