@@ -19,8 +19,8 @@ namespace Projeto_Questionário
         public Principal()
         {
             InitializeComponent();
-
         }
+
         private void loadPrincipal(object sender, EventArgs e)
         {
 
@@ -36,12 +36,15 @@ namespace Projeto_Questionário
         private void frmCategoria(object sender, EventArgs e)
         {
             CATEGORIA frm = new CATEGORIA();
+            frm.TabControlCategoria.TabPages.RemoveAt(2);
+            frm.TabControlCategoria.TabPages.RemoveAt(1);
             frm.ShowDialog();
         }
 
         private void formPergunta(object sender, EventArgs e)
         {
             Pergunta frm = new Pergunta();
+            frm.SetPergunta(true);
             frm.ShowDialog();
         }
 
@@ -83,6 +86,8 @@ namespace Projeto_Questionário
                 pesqCategoria.Visible = false;
                 pesqPergunta.Visible = false;
                 pesqUsuario.Visible = false;
+
+                menuExcluir.Visible = false;
             }
             #endregion
 
@@ -93,6 +98,11 @@ namespace Projeto_Questionário
                 verPontos.Visible = false;
                 novoProfessor.Visible = false;
                 novoUsuario.Visible = false;
+
+                MenuExcluirPontuacao.Visible = false;
+                MenuExcluirUsuario.Visible = false;
+
+                pesqUsuario.Visible = false;
             }
             #endregion
         }
@@ -112,9 +122,16 @@ namespace Projeto_Questionário
         private void formEditarUsuario(object sender, EventArgs e)
         {
             Usuario frm = new Usuario(controleLogin.idUsuario);
-            frm.SetEditandoProprioPerfil(true); // Método para configurar o estado
-            frm.TabControlUsuario.TabPages["tabNovo"].Enabled = false;
-            frm.TabControlUsuario.TabPages["tabPesquisar"].Enabled = false;
+            if (controleLogin.idTipoUsuario == 2 || controleLogin.idTipoUsuario == 3)
+            {
+                frm.SetEditandoProprioPerfil(true); // Método para configurar o estado
+                frm.TabControlUsuario.TabPages.RemoveAt(1);
+                frm.TabControlUsuario.TabPages.RemoveAt(0);
+            }
+            if (controleLogin.idTipoUsuario == 1)
+            {
+                frm.TabControlUsuario.TabPages.RemoveAt(0);
+            }
             frm.ShowDialog();
         }
 
@@ -136,6 +153,82 @@ namespace Projeto_Questionário
             Usuario frm = new Usuario(controleLogin.idUsuario);
             frm.LimparUsuario();
             frm.ComboBoxTipoPublic.Items.Clear();
+            frm.TabControlUsuario.TabPages.RemoveAt(2);
+            frm.TabControlUsuario.TabPages.RemoveAt(1);
+            frm.ShowDialog();
+        }
+
+        private void chamarExcluirPergunta(object sender, EventArgs e)
+        {
+            Pergunta frm = new Pergunta();
+            frm.TabControlPergunta.TabPages.RemoveAt(0);
+            frm.TabControlPergunta.TabPages.RemoveAt(1);
+            frm.SetExcluirPergunta(true); //Passando um valor true para meu bool, para não prencher a comboBox
+            frm.ShowDialog();
+        }
+
+        private void chamarExcluirPontuacao(object sender, EventArgs e)
+        {
+            Pontuacao frm = new Pontuacao();
+            frm.SetExcluirPontuacao(true);
+            frm.ShowDialog();
+        }
+
+        private void formEditarPergunta(object sender, EventArgs e)
+        {
+            Pergunta frm = new Pergunta();
+            frm.TabControlPergunta.TabPages.RemoveAt(0);
+            frm.SetEditarPergunta(true);
+            frm.ShowDialog();
+        }
+
+        private void formPesquisarPergunta(object sender, EventArgs e)
+        {
+            Pergunta frm = new Pergunta();
+            frm.TabControlPergunta.TabPages.RemoveAt(2);
+            frm.TabControlPergunta.TabPages.RemoveAt(0);
+            frm.ShowDialog();
+        }
+
+        private void formNovaPergunta(object sender, EventArgs e)
+        {
+            Pergunta frm = new Pergunta();
+            frm.TabControlPergunta.TabPages.RemoveAt(2);
+            frm.TabControlPergunta.TabPages.RemoveAt(1);
+            frm.ShowDialog();
+        }
+
+        private void chamarEditarCategoria(object sender, EventArgs e)
+        {
+            CATEGORIA frm = new CATEGORIA();
+            frm.TabControlCategoria.TabPages.RemoveAt(0);
+            frm.SetEditarCategoria(true);
+            frm.ShowDialog();
+        }
+
+        private void chamarPesqCategoria(object sender, EventArgs e)
+        {
+            CATEGORIA frm = new CATEGORIA();
+            frm.TabControlCategoria.TabPages.RemoveAt(2);
+            frm.TabControlCategoria.TabPages.RemoveAt(0);
+            frm.ShowDialog();
+        }
+
+        private void chamarPesquisarUsuario(object sender, EventArgs e)
+        {
+            Usuario frm = new Usuario(controleLogin.idUsuario);
+            frm.TabControlUsuario.TabPages.RemoveAt(2);
+            frm.TabControlUsuario.TabPages.RemoveAt(0);
+            frm.SetpesqUsuario(true);
+            frm.ShowDialog();
+        }
+
+        private void chamarExcluirUsuario(object sender, EventArgs e)
+        {
+            Usuario frm = new Usuario(controleLogin.idUsuario);
+            frm.TabControlUsuario.TabPages.RemoveAt(2);
+            frm.TabControlUsuario.TabPages.RemoveAt(0);
+            frm.SetExcluirUsuario(true);
             frm.ShowDialog();
         }
     }

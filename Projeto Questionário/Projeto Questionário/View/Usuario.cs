@@ -18,6 +18,8 @@ namespace Projeto_Questionário.View
         private bool editandoProprioPerfil = false;
         private bool criarNovoAluno = false;
         private bool criarNovoProfessor = false;
+        private bool pesquUsuario = false;
+        private bool excluirUsuario = false;
 
         public void SetEditandoProprioPerfil(bool valor)
         {
@@ -33,6 +35,16 @@ namespace Projeto_Questionário.View
         public void SetCriarNovoAProfessor(bool valor)
         {
             criarNovoProfessor = valor;
+        }
+
+        public void SetpesqUsuario(bool valor)
+        {
+            pesquUsuario = valor;
+        }
+
+        public void SetExcluirUsuario(bool valor)
+        {
+            excluirUsuario = valor;
         }
 
         //Métodos públicos para chamar métodos privados
@@ -167,9 +179,17 @@ namespace Projeto_Questionário.View
                             continue; // Ignora registros que não são alunos
                         }
                     }
-                    else if(criarNovoProfessor)
+                    else if (criarNovoProfessor)
                     {
                         if (idTipoUsuarioBanco != 3) // Mostrar apenas Professor
+                        {
+                            continue;
+                        }
+                    }
+                    else if (excluirUsuario)
+                    {
+                        int idUsuario = int.Parse(usuario["idusuario"].ToString());
+                        if (controleLogin.idUsuario == idUsuario)
                         {
                             continue;
                         }
@@ -219,9 +239,12 @@ namespace Projeto_Questionário.View
                 //se o usuário for professor
                 if (controleLogin.idTipoUsuario == (int)TipoUsuario.Professor)
                 {
-                    //define que o tipo de novo usuário será ALUNO (2)
-                    comboBoxTipo.SelectedIndex = 1;
-                    comboBoxTipo.Enabled = false;//Deixa vísivel mas desabilitado
+                    if (!editandoProprioPerfil)
+                    {
+                        //define que o tipo de novo usuário será ALUNO (2)
+                        comboBoxTipo.SelectedIndex = 1;
+                        comboBoxTipo.Enabled = false;//Deixa vísivel mas desabilitado
+                    }
                 }
             }
             if (criarNovoAluno)
@@ -229,7 +252,7 @@ namespace Projeto_Questionário.View
                 comboBoxTipo.SelectedIndex = 1;
                 comboBoxTipo.Enabled = false;
             }
-            else if(criarNovoProfessor)
+            else if (criarNovoProfessor)
             {
                 comboBoxTipo.SelectedIndex = 2;
                 comboBoxTipo.Enabled = false;
@@ -238,68 +261,88 @@ namespace Projeto_Questionário.View
 
         private void selecionaLinha(object sender, DataGridViewCellEventArgs e)
         {
-            //dialogResult - retorna qual botão foi clicado em uma mensagem
-            DialogResult botao =
-            MessageBox.Show("Deseja editar este usuário?", "Editar conteúdo",
-            MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            modelUsuario mUsuario = new modelUsuario();
-            modelTipoUsuario mTipoUsuario = new modelTipoUsuario();
-            controllerTipoUsuario cTipoUsuario = new controllerTipoUsuario();
-
-            mUsuario.Senha = txbSenhaUser.Text;
-            mTipoUsuario.NomeTipo = "%";
-            NpgsqlDataReader dados = cTipoUsuario.listaTipoUsuario(mTipoUsuario);
-
-            //DataTable - armazena dados em forma da tabela (tipousuarios)
-            DataTable tipousuarios = new DataTable();
-            tipousuarios.Load(dados);
-
-            //preencher a ComboBox com os dados do banco de dados (listagem)
-            comboBoxTipo1.DataSource = tipousuarios;
-
-            //define qual coluna será exibida na Combobox
-            comboBoxTipo1.DisplayMember = "nometipousuario";
-
-            //define qual valor será usado ao selecionar um item
-            comboBoxTipo1.ValueMember = "idtipousuario";
-
-            //define qual item será selecionado por padrão
-            comboBoxTipo1.SelectedIndex = 0;
-
-            if (botao == DialogResult.Yes)
+            if (excluirUsuario)
             {
-                //Armazena na variavel idusuario o valor da coluna 0, na linha
-                //selecionada na dataGridView
-                idusuario = Convert.ToInt32(dataGridViewUser.CurrentRow.Cells[0].Value);
-                txbEditarNomeUser.Text =
-                    dataGridViewUser.CurrentRow.Cells[1].Value.ToString();
+                DialogResult botao =
+                MessageBox.Show("Deseja excluir este usuário?", "Excluir conteúdo",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                txbEditarEmail.Text =
-                    dataGridViewUser.CurrentRow.Cells[2].Value.ToString();
-
-                string tipoUsuario = dataGridViewUser.CurrentRow.Cells[3].Value.ToString();
-
-                //Converte o texto para o enum
-                if (Enum.TryParse<TipoUsuario>(tipoUsuario, out TipoUsuario tipoEnum))
+                if (botao == DialogResult.Yes)
                 {
-                    comboBoxTipo1.SelectedValue = (int) tipoEnum;
-                    if(controleLogin.idTipoUsuario == (int)TipoUsuario.Admin)
+                    modelUsuario mUsuario = new modelUsuario();
+                    controllerUsuario cUsuario = new controllerUsuario();
+
+                    mUsuario.IdUsuario = Convert.ToInt32(dataGridViewUser.CurrentRow.Cells[0].Value);
+                    string res = cUsuario.excluirUsuario(mUsuario);
+                    MessageBox.Show(res);
+                }
+            }
+
+            else if (!pesquUsuario)
+            {
+                //dialogResult - retorna qual botão foi clicado em uma mensagem
+                DialogResult botao1 =
+                MessageBox.Show("Deseja editar este usuário?", "Editar conteúdo",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                modelUsuario mUsuario = new modelUsuario();
+                modelTipoUsuario mTipoUsuario = new modelTipoUsuario();
+                controllerTipoUsuario cTipoUsuario = new controllerTipoUsuario();
+
+                mUsuario.Senha = txbSenhaUser.Text;
+                mTipoUsuario.NomeTipo = "%";
+                NpgsqlDataReader dados = cTipoUsuario.listaTipoUsuario(mTipoUsuario);
+
+                //DataTable - armazena dados em forma da tabela (tipousuarios)
+                DataTable tipousuarios = new DataTable();
+                tipousuarios.Load(dados);
+
+                //preencher a ComboBox com os dados do banco de dados (listagem)
+                comboBoxTipo1.DataSource = tipousuarios;
+
+                //define qual coluna será exibida na Combobox
+                comboBoxTipo1.DisplayMember = "nometipousuario";
+
+                //define qual valor será usado ao selecionar um item
+                comboBoxTipo1.ValueMember = "idtipousuario";
+
+                //define qual item será selecionado por padrão
+                comboBoxTipo1.SelectedIndex = 0;
+
+                if (botao1 == DialogResult.Yes)
+                {
+                    //Armazena na variavel idusuario o valor da coluna 0, na linha
+                    //selecionada na dataGridView
+                    idusuario = Convert.ToInt32(dataGridViewUser.CurrentRow.Cells[0].Value);
+                    txbEditarNomeUser.Text =
+                        dataGridViewUser.CurrentRow.Cells[1].Value.ToString();
+
+                    txbEditarEmail.Text =
+                        dataGridViewUser.CurrentRow.Cells[2].Value.ToString();
+
+                    string tipoUsuario = dataGridViewUser.CurrentRow.Cells[3].Value.ToString();
+
+                    //Converte o texto para o enum
+                    if (Enum.TryParse<TipoUsuario>(tipoUsuario, out TipoUsuario tipoEnum))
                     {
-                        comboBoxTipo1.Enabled = true;
+                        comboBoxTipo1.SelectedValue = (int)tipoEnum;
+                        if (controleLogin.idTipoUsuario == (int)TipoUsuario.Admin)
+                        {
+                            comboBoxTipo1.Enabled = true;
+                        }
+                        else
+                        {
+                            comboBoxTipo1.Enabled = false;
+                        }
                     }
                     else
                     {
-                        comboBoxTipo1.Enabled = false;
+                        MessageBox.Show("Tipo de usuário inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Tipo de usuário inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
 
-                //Seleciona o tabPage especificado
-                tabUsuario.SelectedTab = tabEditar;
+                    //Seleciona o tabPage especificado
+                    tabUsuario.SelectedTab = tabEditar;
+                }
             }
         }
 
@@ -345,7 +388,12 @@ namespace Projeto_Questionário.View
             txbEditarEmail.Text = "";
             txbEditarSenha.Text = "";
             txbEditarConfir.Text = "";
-            editandoProprioPerfil = false; // Reseta o estado
+            editandoProprioPerfil = false;
+        }
+
+        public void fecharForm()
+        {
+            this.Close();
         }
     }
 }

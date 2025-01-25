@@ -20,6 +20,13 @@ namespace Projeto_Questionário.View
             InitializeComponent();
         }
 
+        private bool excluirPontuacao = false;
+
+        public void SetExcluirPontuacao(bool valor)
+        {
+            excluirPontuacao = valor;
+        }
+
         private void listaPontuacao(object sender, EventArgs e)
         {
             controllerPontuacao cPontuacao = new controllerPontuacao();
@@ -28,7 +35,7 @@ namespace Projeto_Questionário.View
             bool isAluno = controleLogin.idTipoUsuario == 2;
 
             // Nome digitado
-            string nomeUsuario = txbPontuacao.Text;
+            string nomeUsuario = txbUsuarioPont.Text;
 
             // Busca as pontuações
             NpgsqlDataReader pontuacao = cPontuacao.listaPontuacao(nomeUsuario, controleLogin.idUsuario, isAluno);
@@ -58,13 +65,34 @@ namespace Projeto_Questionário.View
                         pontuacao["totalerros"].ToString(),
                         pontuacao["datatentativa"].ToString()
                     };
-
                     dataGridViewPontuacao.Rows.Add(linha);
                 }
             }
             else
             {
                 MessageBox.Show("Nenhuma pontuação encontrada.");
+            }
+        }
+
+        private void excluirPont(object sender, DataGridViewCellEventArgs e)
+        {
+            if(excluirPontuacao == true)
+            {
+                DialogResult botao = MessageBox.Show(
+                "Deseja excluir esta Pontuação?",
+                "Excluir conteúdo",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+                if (botao == DialogResult.Yes)
+                {
+                    modelPontuacao mPontuacao = new modelPontuacao();
+                    controllerPontuacao cPontuacao = new controllerPontuacao();
+
+                    mPontuacao.IdTentativa = Convert.ToInt32(dataGridViewPontuacao.CurrentRow.Cells[0].Value);
+                    string res = cPontuacao.excluirPontuacao(mPontuacao);
+                    MessageBox.Show(res);
+                }
             }
         }
     }

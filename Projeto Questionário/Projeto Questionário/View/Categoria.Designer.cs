@@ -91,7 +91,7 @@
             btnCancelar.Text = "CANCELAR";
             btnCancelar.TextAlign = ContentAlignment.MiddleRight;
             btnCancelar.UseVisualStyleBackColor = true;
-            btnCancelar.Click += fecharForm;
+            btnCancelar.Click += cancelarForm;
             // 
             // btnCadastrar
             // 
@@ -212,13 +212,14 @@
             // 
             button1.Image = (Image)resources.GetObject("button1.Image");
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(274, 141);
+            button1.Location = new Point(201, 141);
             button1.Name = "button1";
             button1.Size = new Size(128, 37);
             button1.TabIndex = 7;
             button1.Text = "CANCELAR";
             button1.TextAlign = ContentAlignment.MiddleRight;
             button1.UseVisualStyleBackColor = true;
+            button1.Click += cancelarForm;
             // 
             // btnAtualizaCategoria
             // 

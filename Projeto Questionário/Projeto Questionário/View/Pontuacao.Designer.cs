@@ -32,7 +32,7 @@
             tabControl1 = new TabControl();
             tabPage2 = new TabPage();
             btnPesquisaPontuacao = new Button();
-            txbPontuacao = new TextBox();
+            txbUsuarioPont = new TextBox();
             txtUser = new Label();
             dataGridViewPontuacao = new DataGridView();
             ColumnID = new DataGridViewTextBoxColumn();
@@ -58,7 +58,7 @@
             // tabPage2
             // 
             tabPage2.Controls.Add(btnPesquisaPontuacao);
-            tabPage2.Controls.Add(txbPontuacao);
+            tabPage2.Controls.Add(txbUsuarioPont);
             tabPage2.Controls.Add(txtUser);
             tabPage2.Controls.Add(dataGridViewPontuacao);
             tabPage2.Location = new Point(4, 30);
@@ -83,14 +83,14 @@
             btnPesquisaPontuacao.UseVisualStyleBackColor = false;
             btnPesquisaPontuacao.Click += listaPontuacao;
             // 
-            // txbPontuacao
+            // txbUsuarioPont
             // 
-            txbPontuacao.BorderStyle = BorderStyle.FixedSingle;
-            txbPontuacao.Location = new Point(99, 15);
-            txbPontuacao.Multiline = true;
-            txbPontuacao.Name = "txbPontuacao";
-            txbPontuacao.Size = new Size(523, 35);
-            txbPontuacao.TabIndex = 12;
+            txbUsuarioPont.BorderStyle = BorderStyle.FixedSingle;
+            txbUsuarioPont.Location = new Point(99, 15);
+            txbUsuarioPont.Multiline = true;
+            txbUsuarioPont.Name = "txbUsuarioPont";
+            txbUsuarioPont.Size = new Size(523, 35);
+            txbUsuarioPont.TabIndex = 12;
             // 
             // txtUser
             // 
@@ -115,7 +115,7 @@
             dataGridViewPontuacao.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewPontuacao.Size = new Size(756, 336);
             dataGridViewPontuacao.TabIndex = 0;
-            dataGridViewPontuacao.Click += listaPontuacao;
+            dataGridViewPontuacao.CellClick += excluirPont;
             // 
             // ColumnID
             // 
@@ -163,7 +163,7 @@
         private TabPage tabPage2;
         private DataGridView dataGridViewPontuacao;
         private Button btnPesquisaPontuacao;
-        private TextBox txbPontuacao;
+        private TextBox txbUsuarioPont;
         private Label txtUser;
         private DataGridViewTextBoxColumn ColumnID;
         private DataGridViewTextBoxColumn ColumnNome;

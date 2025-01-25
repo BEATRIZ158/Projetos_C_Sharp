@@ -22,6 +22,17 @@ namespace Projeto_Questionário.View
 
         // Variáveis globais
         int idcategoria = 0;
+        private bool editarCategoria = false;
+
+        public void SetEditarCategoria (bool valor)
+        {
+            editarCategoria = valor;
+        }
+
+        public TabControl TabControlCategoria
+        {
+            get { return tabCategoria; } // Retorna o TabCategoria do formulário
+        }
 
         private void novaCategoria(object sender, EventArgs e)
         {
@@ -38,11 +49,12 @@ namespace Projeto_Questionário.View
 
             // Imprimo o resultado da execução do método
             MessageBox.Show(res);
+            limparCategoria();
         }
 
-        private void fecharForm(object sender, EventArgs e)
+        private void cancelarForm(object sender, EventArgs e)
         {
-            this.Close();
+            txbNomeCategoria.Text = "";
         }
 
         //Evento de pesquisar as categorias
@@ -82,27 +94,26 @@ namespace Projeto_Questionário.View
             }
         }
 
-
         private void selecionaLinha(object sender, DataGridViewCellEventArgs e)
         {
-            //dialogResult - retorna qual botão foi clicado em uma mensagem
-            DialogResult botao =
-            MessageBox.Show("Deseja editar esta categoria?", "Editar conteúdo",
-            MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (botao == DialogResult.Yes)
+            if (editarCategoria)
             {
-                //Armazena na variavel idcategoria o valor da coluna 0, na linha
-                //selecionada na dataGridView
-                idcategoria = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-                txbEditarCategoria.Text =
-                    dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                //dialogResult - retorna qual botão foi clicado em uma mensagem
+                DialogResult botao =
+                MessageBox.Show("Deseja editar esta categoria?", "Editar conteúdo",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+                if (botao == DialogResult.Yes)
+                {
+                    //Armazena na variavel idcategoria o valor da coluna 0, na linha
+                    //selecionada na dataGridView
+                    idcategoria = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                    txbEditarCategoria.Text =
+                        dataGridView1.CurrentRow.Cells[1].Value.ToString();
 
-
-                //Seleciona o tabPage especificado
-                tabCategoria.SelectedTab = abaEditar;
-
+                    //Seleciona o tabPage especificado
+                    tabCategoria.SelectedTab = abaEditar;
+                }
             }
         }
 
@@ -117,6 +128,11 @@ namespace Projeto_Questionário.View
             string res = cCategoria.atualizaCategorias(mCategoria);
 
             MessageBox.Show(res);
+        }
+
+        public void limparCategoria()
+        {
+            txbNomeCategoria.Text = "";
         }
     }
 }

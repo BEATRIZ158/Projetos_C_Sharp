@@ -21,9 +21,34 @@ namespace Projeto_Questionário.View
             InitializeComponent();
         }
 
+        private bool excluirPergunta = false;
+        private bool editarPergunta = false;
+        private bool PerguntaPadrao = false;
+
         int idpergunta = 0;
 
-        private void configForm(object sender, EventArgs e)
+        // Funções de retorno de estado e de TabControl
+        public void SetExcluirPergunta(bool valor)
+        {
+            excluirPergunta = valor;
+        }
+
+        public void SetEditarPergunta(bool valor)
+        {
+            editarPergunta = valor;
+        }
+
+        public void SetPergunta(bool valor)
+        {
+            PerguntaPadrao = valor;
+        }
+
+        public TabControl TabControlPergunta
+        {
+            get { return tabPergunta; }
+        }
+
+        public void configForm(object sender, EventArgs e)
         {
             modelCategoria mCategoria = new modelCategoria();
             controllerCategoria cCategoria = new controllerCategoria();
@@ -44,8 +69,10 @@ namespace Projeto_Questionário.View
             //define qual valor será usado ao selecionar  um item
             comboBox1.ValueMember = "idcategoria";
 
-            //define qual item será selecionado por padrão
-            comboBox1.SelectedIndex = 0;
+            if (PerguntaPadrao) // Mesma lógica de PerguntaPadrao == true
+            {
+                comboBox1.SelectedIndex = 0;
+            }
         }
 
         private void novaPergunta(object sender, EventArgs e)
@@ -127,55 +154,78 @@ namespace Projeto_Questionário.View
 
         private void selecionaLinha(object sender, DataGridViewCellEventArgs e)
         {
-            DialogResult botao = MessageBox.Show(
+            if (excluirPergunta == true)
+            {
+                DialogResult botao1 = MessageBox.Show(
+                "Deseja excluir esta pergunta?",
+                "Excluir conteúdo",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+                if (botao1 == DialogResult.Yes)
+                {
+                    modelPergunta mPergunta = new modelPergunta();
+                    controllerPergunta cPergunta = new controllerPergunta();
+
+                    mPergunta.IdPergunta = Convert.ToInt32(dataGridViewPergunta.CurrentRow.Cells[0].Value);
+                    string res = cPergunta.excluirPergunta(mPergunta);
+                    MessageBox.Show(res);
+                }
+            }
+            else if(editarPergunta == true || PerguntaPadrao == true) 
+            {
+                excluirPergunta = false;
+
+                DialogResult botao = MessageBox.Show(
                 "Deseja editar esta pergunta?",
                 "Editar conteúdo",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
 
-            if (botao == DialogResult.Yes)
-            {
-                // Obtém o ID da pergunta selecionada na DataGridView
-                int idPergunta = Convert.ToInt32(dataGridViewPergunta.CurrentRow.Cells[0].Value);
-
-                // Instancia objetos necessários
-                modelPergunta mPergunta = new modelPergunta { IdPergunta = idPergunta };
-                controllerPergunta cPergunta = new controllerPergunta();
-                modelCategoria mCategoria = new modelCategoria();
-                controllerCategoria cCategoria = new controllerCategoria();
-
-                // Preenche o ComboBox com as categorias
-                NpgsqlDataReader dadosCategorias = cCategoria.listaCategorias(mCategoria);
-
-                DataTable categorias = new DataTable();
-                categorias.Load(dadosCategorias);
-
-                comboBoxEditarCategoria.DataSource = categorias;
-                comboBoxEditarCategoria.DisplayMember = "nomecategoria";
-                comboBoxEditarCategoria.ValueMember = "idcategoria";
-                comboBoxEditarCategoria.SelectedIndex = 0;
-
-                // Busca os detalhes da pergunta no banco
-                NpgsqlDataReader dadosPergunta = cPergunta.detalhesPergunta(mPergunta);
-
-                if (dadosPergunta != null && dadosPergunta.HasRows)
+                if (botao == DialogResult.Yes)
                 {
-                    while (dadosPergunta.Read())
-                    {
-                        // Preenche os campos da aba de edição
-                        rtbEditarPergunta.Text = dadosPergunta["pergunta"].ToString();
-                        rtbEditarAlter1.Text = dadosPergunta["alter1"].ToString();
-                        rtbEditarAlter2.Text = dadosPergunta["alter2"].ToString();
-                        rtbEditarAlter3.Text = dadosPergunta["alter3"].ToString();
-                        rtbEditarAlter4.Text = dadosPergunta["alter4"].ToString();
-                        rtbEditarResposta.Text = dadosPergunta["resp"].ToString();
+                    // Obtém o ID da pergunta selecionada na DataGridView
+                    int idPergunta = Convert.ToInt32(dataGridViewPergunta.CurrentRow.Cells[0].Value);
 
-                        // Seleciona a categoria correta
-                        comboBoxEditarCategoria.SelectedValue = Convert.ToInt32(dadosPergunta["idcategoria"]);
+                    // Instancia objetos necessários
+                    modelPergunta mPergunta = new modelPergunta { IdPergunta = idPergunta };
+                    controllerPergunta cPergunta = new controllerPergunta();
+                    modelCategoria mCategoria = new modelCategoria();
+                    controllerCategoria cCategoria = new controllerCategoria();
+
+                    // Preenche o ComboBox com as categorias
+                    NpgsqlDataReader dadosCategorias = cCategoria.listaCategorias(mCategoria);
+
+                    DataTable categorias = new DataTable();
+                    categorias.Load(dadosCategorias);
+
+                    comboBoxEditarCategoria.DataSource = categorias;
+                    comboBoxEditarCategoria.DisplayMember = "nomecategoria";
+                    comboBoxEditarCategoria.ValueMember = "idcategoria";
+                    comboBoxEditarCategoria.SelectedIndex = 0;
+
+                    // Busca os detalhes da pergunta no banco
+                    NpgsqlDataReader dadosPergunta = cPergunta.detalhesPergunta(mPergunta);
+
+                    if (dadosPergunta != null && dadosPergunta.HasRows)
+                    {
+                        while (dadosPergunta.Read())
+                        {
+                            // Preenche os campos da aba de edição
+                            rtbEditarPergunta.Text = dadosPergunta["pergunta"].ToString();
+                            rtbEditarAlter1.Text = dadosPergunta["alter1"].ToString();
+                            rtbEditarAlter2.Text = dadosPergunta["alter2"].ToString();
+                            rtbEditarAlter3.Text = dadosPergunta["alter3"].ToString();
+                            rtbEditarAlter4.Text = dadosPergunta["alter4"].ToString();
+                            rtbEditarResposta.Text = dadosPergunta["resp"].ToString();
+
+                            // Seleciona a categoria correta
+                            comboBoxEditarCategoria.SelectedValue = Convert.ToInt32(dadosPergunta["idcategoria"]);
+                        }
                     }
+                    // Troca para a aba de edição
+                    tabPergunta.SelectedTab = abaEditar;
                 }
-                // Troca para a aba de edição
-                tabPergunta.SelectedTab = abaEditar;
             }
         }
 

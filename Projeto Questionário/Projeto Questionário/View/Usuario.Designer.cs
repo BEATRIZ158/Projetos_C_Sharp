@@ -149,6 +149,7 @@
             btnCancelarUser.Text = "CANCELAR";
             btnCancelarUser.TextAlign = ContentAlignment.MiddleRight;
             btnCancelarUser.UseVisualStyleBackColor = true;
+            btnCancelarUser.Click += this.fecharForm;
             // 
             // btnCadastrarUser
             // 
@@ -297,10 +298,10 @@
             // txbPesquisaUser
             // 
             txbPesquisaUser.BorderStyle = BorderStyle.FixedSingle;
-            txbPesquisaUser.Location = new Point(113, 12);
+            txbPesquisaUser.Location = new Point(101, 12);
             txbPesquisaUser.Multiline = true;
             txbPesquisaUser.Name = "txbPesquisaUser";
-            txbPesquisaUser.Size = new Size(394, 35);
+            txbPesquisaUser.Size = new Size(406, 35);
             txbPesquisaUser.TabIndex = 9;
             // 
             // txtUser
@@ -373,6 +374,7 @@
             button1.Text = "CANCELAR";
             button1.TextAlign = ContentAlignment.MiddleRight;
             button1.UseVisualStyleBackColor = true;
+            button1.Click += this.fecharForm;
             // 
             // btnAtualizar
             // 

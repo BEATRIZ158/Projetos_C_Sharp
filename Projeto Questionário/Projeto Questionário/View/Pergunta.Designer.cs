@@ -566,9 +566,9 @@
             groupBox4.Controls.Add(label9);
             groupBox4.Controls.Add(rtbEditarPergunta);
             groupBox4.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            groupBox4.Location = new Point(5, 15);
+            groupBox4.Location = new Point(5, 6);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(847, 127);
+            groupBox4.Size = new Size(847, 136);
             groupBox4.TabIndex = 1;
             groupBox4.TabStop = false;
             groupBox4.Text = "Dados da Pergunta:";
