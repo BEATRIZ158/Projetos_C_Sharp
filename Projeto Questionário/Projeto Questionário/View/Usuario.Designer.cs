@@ -149,7 +149,7 @@
             btnCancelarUser.Text = "CANCELAR";
             btnCancelarUser.TextAlign = ContentAlignment.MiddleRight;
             btnCancelarUser.UseVisualStyleBackColor = true;
-            btnCancelarUser.Click += this.fecharForm;
+            btnCancelarUser.Click += btnCancelarCriacao;
             // 
             // btnCadastrarUser
             // 
@@ -374,7 +374,7 @@
             button1.Text = "CANCELAR";
             button1.TextAlign = ContentAlignment.MiddleRight;
             button1.UseVisualStyleBackColor = true;
-            button1.Click += this.fecharForm;
+            button1.Click += btnCancelarEdicao;
             // 
             // btnAtualizar
             // 

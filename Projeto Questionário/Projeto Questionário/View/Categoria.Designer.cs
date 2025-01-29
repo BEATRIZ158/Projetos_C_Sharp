@@ -91,7 +91,7 @@
             btnCancelar.Text = "CANCELAR";
             btnCancelar.TextAlign = ContentAlignment.MiddleRight;
             btnCancelar.UseVisualStyleBackColor = true;
-            btnCancelar.Click += cancelarForm;
+            btnCancelar.Click += btnCancelarCriacao;
             // 
             // btnCadastrar
             // 
@@ -219,7 +219,7 @@
             button1.Text = "CANCELAR";
             button1.TextAlign = ContentAlignment.MiddleRight;
             button1.UseVisualStyleBackColor = true;
-            button1.Click += cancelarForm;
+            button1.Click += btnCancelarEdicao;
             // 
             // btnAtualizaCategoria
             // 

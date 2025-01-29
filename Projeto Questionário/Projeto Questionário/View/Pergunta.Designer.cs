@@ -63,7 +63,7 @@
             groupBox6 = new GroupBox();
             label14 = new Label();
             rtbEditarResposta = new RichTextBox();
-            button1 = new Button();
+            btnCancelarEditarPerg = new Button();
             btnAtualizar = new Button();
             groupBox5 = new GroupBox();
             label10 = new Label();
@@ -132,13 +132,14 @@
             btnCancelar.Text = "CANCELAR";
             btnCancelar.TextAlign = ContentAlignment.MiddleRight;
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btncancelarPergunta;
             // 
             // btnCadastrar
             // 
             btnCadastrar.Font = new Font("Century", 12F);
             btnCadastrar.Image = (Image)resources.GetObject("btnCadastrar.Image");
             btnCadastrar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCadastrar.Location = new Point(528, 411);
+            btnCadastrar.Location = new Point(529, 411);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(137, 37);
             btnCadastrar.TabIndex = 4;
@@ -402,7 +403,7 @@
             // abaEditar
             // 
             abaEditar.Controls.Add(groupBox6);
-            abaEditar.Controls.Add(button1);
+            abaEditar.Controls.Add(btnCancelarEditarPerg);
             abaEditar.Controls.Add(btnAtualizar);
             abaEditar.Controls.Add(groupBox5);
             abaEditar.Controls.Add(groupBox4);
@@ -418,9 +419,10 @@
             // 
             groupBox6.Controls.Add(label14);
             groupBox6.Controls.Add(rtbEditarResposta);
+            groupBox6.Font = new Font("Segoe UI", 11.25F);
             groupBox6.Location = new Point(5, 370);
             groupBox6.Name = "groupBox6";
-            groupBox6.Size = new Size(519, 116);
+            groupBox6.Size = new Size(511, 116);
             groupBox6.TabIndex = 6;
             groupBox6.TabStop = false;
             groupBox6.Text = "Dados da resposta correta - Valor exatamente igual a alternativa correta";
@@ -443,25 +445,26 @@
             rtbEditarResposta.TabIndex = 0;
             rtbEditarResposta.Text = "";
             // 
-            // button1
+            // btnCancelarEditarPerg
             // 
-            button1.Font = new Font("Century", 12F);
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(719, 411);
-            button1.Name = "button1";
-            button1.Size = new Size(127, 37);
-            button1.TabIndex = 8;
-            button1.Text = "CANCELAR";
-            button1.TextAlign = ContentAlignment.MiddleRight;
-            button1.UseVisualStyleBackColor = true;
+            btnCancelarEditarPerg.Font = new Font("Century", 12F);
+            btnCancelarEditarPerg.Image = (Image)resources.GetObject("btnCancelarEditarPerg.Image");
+            btnCancelarEditarPerg.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCancelarEditarPerg.Location = new Point(719, 411);
+            btnCancelarEditarPerg.Name = "btnCancelarEditarPerg";
+            btnCancelarEditarPerg.Size = new Size(127, 37);
+            btnCancelarEditarPerg.TabIndex = 8;
+            btnCancelarEditarPerg.Text = "CANCELAR";
+            btnCancelarEditarPerg.TextAlign = ContentAlignment.MiddleRight;
+            btnCancelarEditarPerg.UseVisualStyleBackColor = true;
+            btnCancelarEditarPerg.Click += btncancelarEditarPergunta;
             // 
             // btnAtualizar
             // 
             btnAtualizar.Font = new Font("Century", 12F);
             btnAtualizar.Image = (Image)resources.GetObject("btnAtualizar.Image");
             btnAtualizar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAtualizar.Location = new Point(542, 411);
+            btnAtualizar.Location = new Point(533, 411);
             btnAtualizar.Name = "btnAtualizar";
             btnAtualizar.Size = new Size(137, 37);
             btnAtualizar.TabIndex = 7;
@@ -480,6 +483,7 @@
             groupBox5.Controls.Add(rtbEditarAlter2);
             groupBox5.Controls.Add(label13);
             groupBox5.Controls.Add(rtbEditarAlter1);
+            groupBox5.Font = new Font("Segoe UI", 11.25F);
             groupBox5.Location = new Point(5, 138);
             groupBox5.Name = "groupBox5";
             groupBox5.Size = new Size(848, 217);
@@ -679,7 +683,7 @@
         private GroupBox groupBox6;
         private Label label14;
         private RichTextBox rtbEditarResposta;
-        private Button button1;
+        private Button btnCancelarEditarPerg;
         private Button btnAtualizar;
         private GroupBox groupBox5;
         private Label label10;

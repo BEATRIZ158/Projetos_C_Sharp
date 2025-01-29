@@ -27,6 +27,14 @@ namespace Projeto_Questionário.View
 
         int idpergunta = 0;
 
+        public enum EstadoCancelarPergunta
+        {
+            Criacao,
+            Edicao
+        }
+
+        private EstadoCancelarPergunta estadoAtual;
+
         // Funções de retorno de estado e de TabControl
         public void SetExcluirPergunta(bool valor)
         {
@@ -143,12 +151,8 @@ namespace Projeto_Questionário.View
                 //exibir a resposta do método de cadastro
                 MessageBox.Show(resultado);
 
-                txbPergunta.Text = "";
-                txbAlter1.Text = "";
-                txbAlter2.Text = "";
-                txbAlter3.Text = "";
-                txbAlter4.Text = "";
-                txbResposta.Text = "";
+                estadoAtual = EstadoCancelarPergunta.Criacao;
+                CancelarPergunta();
             }
         }
 
@@ -172,7 +176,7 @@ namespace Projeto_Questionário.View
                     MessageBox.Show(res);
                 }
             }
-            else if(editarPergunta == true || PerguntaPadrao == true) 
+            else if (editarPergunta == true || PerguntaPadrao == true)
             {
                 excluirPergunta = false;
 
@@ -311,12 +315,43 @@ namespace Projeto_Questionário.View
             string res = cPergunta.atualizaPerguntas(mPergunta);
             MessageBox.Show(res);
 
-            rtbEditarPergunta.Text = "";
-            rtbEditarAlter1.Text = "";
-            rtbEditarAlter2.Text = "";
-            rtbEditarAlter3.Text = "";
-            rtbEditarAlter4.Text = "";
-            rtbEditarResposta.Text = "";
+            estadoAtual = EstadoCancelarPergunta.Edicao;
+            CancelarPergunta();
+        }
+
+        private void CancelarPergunta()
+        {
+            switch (estadoAtual)
+            {
+                case EstadoCancelarPergunta.Criacao:
+                    txbPergunta.Text = "";
+                    txbAlter1.Text = "";
+                    txbAlter2.Text = "";
+                    txbAlter3.Text = "";
+                    txbAlter4.Text = "";
+                    txbResposta.Text = "";
+                    break;
+                case EstadoCancelarPergunta.Edicao:
+                    rtbEditarPergunta.Text = "";
+                    rtbEditarAlter1.Text = "";
+                    rtbEditarAlter2.Text = "";
+                    rtbEditarAlter3.Text = "";
+                    rtbEditarAlter4.Text = "";
+                    rtbEditarResposta.Text = "";
+                    break;
+            }
+        }
+
+        private void btncancelarPergunta(object sender, EventArgs e)
+        {
+            estadoAtual = EstadoCancelarPergunta.Criacao;
+            CancelarPergunta();
+        }
+
+        private void btncancelarEditarPergunta(object sender, EventArgs e)
+        {
+            estadoAtual = EstadoCancelarPergunta.Edicao;
+            CancelarPergunta();
         }
     }
 }

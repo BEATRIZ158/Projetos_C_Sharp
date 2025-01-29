@@ -21,6 +21,14 @@ namespace Projeto_Questionário.View
         private bool pesquUsuario = false;
         private bool excluirUsuario = false;
 
+        public enum EstadoCancelarUsuario
+        {
+            Criacao,
+            Edicao
+        }
+
+        private EstadoCancelarUsuario estadoAtual;
+
         public void SetEditandoProprioPerfil(bool valor)
         {
             editandoProprioPerfil = valor;
@@ -131,10 +139,8 @@ namespace Projeto_Questionário.View
             string res = cUsuario.cadastraUsuario(mUsuario);
             MessageBox.Show(res);
 
-            txbNomeUser.Text = "";
-            txbEmail.Text = "";
-            txbSenhaUser.Text = "";
-            txbConfirmarSenha.Text = "";
+            estadoAtual = EstadoCancelarUsuario.Criacao;
+            cancelarUsuario();
         }
 
         private void listaUsuario(object sender, EventArgs e)
@@ -383,17 +389,41 @@ namespace Projeto_Questionário.View
             string resultado = cUsuario.atualizaUsuarios(mUsuario);
             MessageBox.Show(resultado);
 
-            // Limpa os campos e reseta o alerta
-            txbEditarNomeUser.Text = "";
-            txbEditarEmail.Text = "";
-            txbEditarSenha.Text = "";
-            txbEditarConfir.Text = "";
+            estadoAtual = EstadoCancelarUsuario.Edicao;
+            cancelarUsuario();
             editandoProprioPerfil = false;
         }
 
-        public void fecharForm()
+        private void cancelarUsuario()
         {
-            this.Close();
+            switch (estadoAtual)
+            {
+                case EstadoCancelarUsuario.Criacao:
+                    txbNomeUser.Text = "";
+                    txbEmail.Text = "";
+                    txbSenhaUser.Text = "";
+                    txbConfirmarSenha.Text = "";
+                    break;
+
+                case EstadoCancelarUsuario.Edicao:
+                    txbEditarNomeUser.Text = "";
+                    txbEditarEmail.Text = "";
+                    txbEditarSenha.Text = "";
+                    txbEditarConfir.Text = "";
+                    break;
+            }
+        }
+
+        private void btnCancelarCriacao(object sender, EventArgs e)
+        {
+            estadoAtual = EstadoCancelarUsuario.Criacao; // Define o estado para criação
+            cancelarUsuario(); // Chama o método reutilizado
+        }
+
+        private void btnCancelarEdicao(object sender, EventArgs e)
+        {
+            estadoAtual = EstadoCancelarUsuario.Edicao; // Define o estado para edição
+            cancelarUsuario();
         }
     }
 }

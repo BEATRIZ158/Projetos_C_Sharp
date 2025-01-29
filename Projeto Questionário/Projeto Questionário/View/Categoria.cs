@@ -24,7 +24,15 @@ namespace Projeto_Questionário.View
         int idcategoria = 0;
         private bool editarCategoria = false;
 
-        public void SetEditarCategoria (bool valor)
+        public enum EstadoCancelarCategoria
+        {
+            Criacao,
+            Edicao
+        }
+
+        private EstadoCancelarCategoria estadoAtual;
+
+        public void SetEditarCategoria(bool valor)
         {
             editarCategoria = valor;
         }
@@ -133,6 +141,31 @@ namespace Projeto_Questionário.View
         public void limparCategoria()
         {
             txbNomeCategoria.Text = "";
+        }
+
+        private void CancelarCategoria()
+        {
+            switch (estadoAtual)
+            {
+                case EstadoCancelarCategoria.Criacao:
+                    txbNomeCategoria.Text = "";
+                    break;
+                case EstadoCancelarCategoria.Edicao:
+                    txbEditarCategoria.Text = "";
+                    break;
+            }
+        }
+
+        private void btnCancelarCriacao(object sender, EventArgs e)
+        {
+            estadoAtual = EstadoCancelarCategoria.Criacao;
+            CancelarCategoria();
+        }
+
+        private void btnCancelarEdicao(object sender, EventArgs e)
+        {
+            estadoAtual = EstadoCancelarCategoria.Edicao;
+            CancelarCategoria();
         }
     }
 }
