@@ -153,8 +153,9 @@
             Controls.Add(linkLabel1);
             Controls.Add(pictureBox1);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Login";
-            Text = "Login";
+            Text = "LOGIN";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

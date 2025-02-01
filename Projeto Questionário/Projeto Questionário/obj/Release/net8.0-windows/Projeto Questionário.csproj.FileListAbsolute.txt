@@ -1,0 +1,29 @@
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\bin\Release\net8.0-windows\Projeto Questionário.exe
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\bin\Release\net8.0-windows\Projeto Questionário.deps.json
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\bin\Release\net8.0-windows\Projeto Questionário.runtimeconfig.json
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\bin\Release\net8.0-windows\Projeto Questionário.dll
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\bin\Release\net8.0-windows\Projeto Questionário.pdb
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\bin\Release\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\bin\Release\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\bin\Release\net8.0-windows\Npgsql.dll
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Release\net8.0-windows\Projeto Questionário.csproj.AssemblyReference.cache
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Release\net8.0-windows\Projeto_Questionário.Properties.Resources.resources
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Release\net8.0-windows\Projeto_Questionário.View.CATEGORIA.resources
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Release\net8.0-windows\Projeto_Questionário.View.Login.resources
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Release\net8.0-windows\Projeto_Questionário.View.Pergunta.resources
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Release\net8.0-windows\Projeto_Questionário.View.Pontuacao.resources
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Release\net8.0-windows\Projeto_Questionário.Principal.resources
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Release\net8.0-windows\Projeto_Questionário.View.Questionario.resources
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Release\net8.0-windows\Projeto_Questionário.View.Usuario.resources
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Release\net8.0-windows\Projeto Questionário.csproj.GenerateResource.cache
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Release\net8.0-windows\Projeto Questionário.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Release\net8.0-windows\Projeto Questionário.AssemblyInfoInputs.cache
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Release\net8.0-windows\Projeto Questionário.AssemblyInfo.cs
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Release\net8.0-windows\Projeto Questionário.csproj.CoreCompileInputs.cache
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Release\net8.0-windows\Projeto Questionário.sourcelink.json
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Release\net8.0-windows\Projeto .38FAB0C9.Up2Date
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Release\net8.0-windows\Projeto Questionário.dll
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Release\net8.0-windows\refint\Projeto Questionário.dll
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Release\net8.0-windows\Projeto Questionário.pdb
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Release\net8.0-windows\Projeto Questionário.genruntimeconfig.cache
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Lab. De eng de Software\Projeto Questionário\Projeto Questionário\obj\Release\net8.0-windows\ref\Projeto Questionário.dll

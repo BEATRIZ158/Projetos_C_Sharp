@@ -336,6 +336,7 @@
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Questionario";
             Text = "Questionario";
             Load += configForm;

@@ -21,36 +21,23 @@ namespace Projeto_Questionário.View
             InitializeComponent();
         }
 
-        private bool excluirPergunta = false;
-        private bool editarPergunta = false;
-        private bool PerguntaPadrao = false;
+        public enum EstadoPergunta
+        {
+            Padrao,
+            Excluir,
+            Editar,
+            Pesquisar
+        }
 
         int idpergunta = 0;
-
-        public enum EstadoCancelarPergunta
+        private EstadoPergunta EstadoAtual = EstadoPergunta.Padrao;
+        
+        public void DefinirEstado(EstadoPergunta estado)
         {
-            Criacao,
-            Edicao
+            EstadoAtual = estado;
         }
 
-        private EstadoCancelarPergunta estadoAtual;
-
-        // Funções de retorno de estado e de TabControl
-        public void SetExcluirPergunta(bool valor)
-        {
-            excluirPergunta = valor;
-        }
-
-        public void SetEditarPergunta(bool valor)
-        {
-            editarPergunta = valor;
-        }
-
-        public void SetPergunta(bool valor)
-        {
-            PerguntaPadrao = valor;
-        }
-
+        // Função para retornar TabControl
         public TabControl TabControlPergunta
         {
             get { return tabPergunta; }
@@ -77,9 +64,12 @@ namespace Projeto_Questionário.View
             //define qual valor será usado ao selecionar  um item
             comboBox1.ValueMember = "idcategoria";
 
-            if (PerguntaPadrao) // Mesma lógica de PerguntaPadrao == true
+            //Alterar aqui!
+            switch(EstadoAtual)
             {
-                comboBox1.SelectedIndex = 0;
+                case EstadoPergunta.Padrao:
+                    comboBox1.SelectedIndex = 0;
+                    break;
             }
         }
 
@@ -151,14 +141,15 @@ namespace Projeto_Questionário.View
                 //exibir a resposta do método de cadastro
                 MessageBox.Show(resultado);
 
-                estadoAtual = EstadoCancelarPergunta.Criacao;
+                EstadoAtual = EstadoPergunta.Padrao;
                 CancelarPergunta();
             }
         }
 
         private void selecionaLinha(object sender, DataGridViewCellEventArgs e)
         {
-            if (excluirPergunta == true)
+            //Alterar aqui!
+            if (EstadoAtual == EstadoPergunta.Excluir)
             {
                 DialogResult botao1 = MessageBox.Show(
                 "Deseja excluir esta pergunta?",
@@ -175,10 +166,10 @@ namespace Projeto_Questionário.View
                     string res = cPergunta.excluirPergunta(mPergunta);
                     MessageBox.Show(res);
                 }
-            }
-            else if (editarPergunta == true || PerguntaPadrao == true)
+            }//Alterar aqui!
+            else if (EstadoAtual == EstadoPergunta.Editar || EstadoAtual == EstadoPergunta.Padrao)
             {
-                excluirPergunta = false;
+                //excluirPergunta = false;
 
                 DialogResult botao = MessageBox.Show(
                 "Deseja editar esta pergunta?",
@@ -315,15 +306,15 @@ namespace Projeto_Questionário.View
             string res = cPergunta.atualizaPerguntas(mPergunta);
             MessageBox.Show(res);
 
-            estadoAtual = EstadoCancelarPergunta.Edicao;
+            EstadoAtual = EstadoPergunta.Editar;
             CancelarPergunta();
         }
 
         private void CancelarPergunta()
         {
-            switch (estadoAtual)
+            switch (EstadoAtual)
             {
-                case EstadoCancelarPergunta.Criacao:
+                case EstadoPergunta.Padrao:
                     txbPergunta.Text = "";
                     txbAlter1.Text = "";
                     txbAlter2.Text = "";
@@ -331,7 +322,7 @@ namespace Projeto_Questionário.View
                     txbAlter4.Text = "";
                     txbResposta.Text = "";
                     break;
-                case EstadoCancelarPergunta.Edicao:
+                case EstadoPergunta.Editar:
                     rtbEditarPergunta.Text = "";
                     rtbEditarAlter1.Text = "";
                     rtbEditarAlter2.Text = "";
@@ -344,13 +335,13 @@ namespace Projeto_Questionário.View
 
         private void btncancelarPergunta(object sender, EventArgs e)
         {
-            estadoAtual = EstadoCancelarPergunta.Criacao;
+            EstadoAtual = EstadoPergunta.Padrao;
             CancelarPergunta();
         }
 
         private void btncancelarEditarPergunta(object sender, EventArgs e)
         {
-            estadoAtual = EstadoCancelarPergunta.Edicao;
+            EstadoAtual = EstadoPergunta.Editar;
             CancelarPergunta();
         }
     }

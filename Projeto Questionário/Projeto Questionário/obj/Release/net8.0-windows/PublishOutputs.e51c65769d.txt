@@ -1,0 +1,8 @@
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Quizz\Projeto Questionário.exe
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Quizz\Projeto Questionário.dll
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Quizz\Projeto Questionário.deps.json
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Quizz\Projeto Questionário.runtimeconfig.json
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Quizz\Projeto Questionário.pdb
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Quizz\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Quizz\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\beatr\OneDrive\Área de Trabalho\ADS - 5 Semestre\Quizz\Npgsql.dll

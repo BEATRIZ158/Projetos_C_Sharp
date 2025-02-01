@@ -26,7 +26,7 @@ namespace Projeto_Questionário
 
         }
 
-        // Executa o form de login a 1 vez que o form principal dor aberto
+        // Executa o form de login a 1 vez que o form principal for aberto
         private void formLogin(object sender, EventArgs e)//Shown
         {
             Login frm = new Login();
@@ -44,7 +44,7 @@ namespace Projeto_Questionário
         private void formPergunta(object sender, EventArgs e)
         {
             Pergunta frm = new Pergunta();
-            frm.SetPergunta(true);
+            frm.DefinirEstado(Pergunta.EstadoPergunta.Padrao);
             frm.ShowDialog();
         }
 
@@ -56,7 +56,7 @@ namespace Projeto_Questionário
             //Liberando para criar um novo Aluno
             if (controleLogin.idTipoUsuario == (int)TipoUsuario.Admin)
             {
-                frm.SetCriarNovoAluno(true);
+                frm.DefinirEstadoUsuario(Usuario.EstadoUsuario.CriarNovoAluno);
             }
             frm.ShowDialog();
         }
@@ -64,7 +64,7 @@ namespace Projeto_Questionário
         private void habilitarBotoes(object sender, EventArgs e)
         {
             string idTipo = Convert.ToString(controleLogin.idTipoUsuario);
-            MessageBox.Show("Seja Bem vindo(a)", controleLogin.nomeUsuario);
+            MessageBox.Show("Seja Bem-vindo(a)" + controleLogin.nomeUsuario + "!", "Mensagem");
 
             #region usuarioAluno
             if (controleLogin.idTipoUsuario == (int)TipoUsuario.Aluno)
@@ -84,7 +84,6 @@ namespace Projeto_Questionário
                 editarPergunta.Visible = false;
 
                 pesqCategoria.Visible = false;
-                pesqPergunta.Visible = false;
                 pesqUsuario.Visible = false;
 
                 menuExcluir.Visible = false;
@@ -122,14 +121,15 @@ namespace Projeto_Questionário
         private void formEditarUsuario(object sender, EventArgs e)
         {
             Usuario frm = new Usuario(controleLogin.idUsuario);
-            if (controleLogin.idTipoUsuario == 2 || controleLogin.idTipoUsuario == 3)
+            if (controleLogin.idTipoUsuario != 1)
             {
-                frm.SetEditandoProprioPerfil(true); // Método para configurar o estado
+                frm.DefinirEstadoUsuario(Usuario.EstadoUsuario.EditarPropPerfil);
                 frm.TabControlUsuario.TabPages.RemoveAt(1);
                 frm.TabControlUsuario.TabPages.RemoveAt(0);
             }
             if (controleLogin.idTipoUsuario == 1)
             {
+                frm.DefinirEstadoUsuario(Usuario.EstadoUsuario.EditarUsuario);
                 frm.TabControlUsuario.TabPages.RemoveAt(0);
             }
             frm.ShowDialog();
@@ -143,7 +143,7 @@ namespace Projeto_Questionário
             //Liberando para criar um novo Professor
             if (controleLogin.idTipoUsuario == (int)TipoUsuario.Admin)
             {
-                frm.SetCriarNovoAProfessor(true);
+                frm.DefinirEstadoUsuario(Usuario.EstadoUsuario.CriarNovoProf);
             }
             frm.ShowDialog();
         }
@@ -151,6 +151,7 @@ namespace Projeto_Questionário
         private void formQualquerUsuario(object sender, EventArgs e)
         {
             Usuario frm = new Usuario(controleLogin.idUsuario);
+            frm.DefinirEstadoUsuario(Usuario.EstadoUsuario.EditarUsuario);
             frm.LimparUsuario();
             frm.ComboBoxTipoPublic.Items.Clear();
             frm.TabControlUsuario.TabPages.RemoveAt(2);
@@ -163,7 +164,7 @@ namespace Projeto_Questionário
             Pergunta frm = new Pergunta();
             frm.TabControlPergunta.TabPages.RemoveAt(0);
             frm.TabControlPergunta.TabPages.RemoveAt(1);
-            frm.SetExcluirPergunta(true); //Passando um valor true para meu bool, para não prencher a comboBox
+            frm.DefinirEstado(Pergunta.EstadoPergunta.Excluir);
             frm.ShowDialog();
         }
 
@@ -178,7 +179,7 @@ namespace Projeto_Questionário
         {
             Pergunta frm = new Pergunta();
             frm.TabControlPergunta.TabPages.RemoveAt(0);
-            frm.SetEditarPergunta(true);
+            frm.DefinirEstado(Pergunta.EstadoPergunta.Editar);
             frm.ShowDialog();
         }
 
@@ -187,6 +188,7 @@ namespace Projeto_Questionário
             Pergunta frm = new Pergunta();
             frm.TabControlPergunta.TabPages.RemoveAt(2);
             frm.TabControlPergunta.TabPages.RemoveAt(0);
+            frm.DefinirEstado(Pergunta.EstadoPergunta.Pesquisar);
             frm.ShowDialog();
         }
 
@@ -219,7 +221,7 @@ namespace Projeto_Questionário
             Usuario frm = new Usuario(controleLogin.idUsuario);
             frm.TabControlUsuario.TabPages.RemoveAt(2);
             frm.TabControlUsuario.TabPages.RemoveAt(0);
-            frm.SetpesqUsuario(true);
+            frm.DefinirEstadoUsuario(Usuario.EstadoUsuario.PesqUsuario);
             frm.ShowDialog();
         }
 
@@ -228,8 +230,14 @@ namespace Projeto_Questionário
             Usuario frm = new Usuario(controleLogin.idUsuario);
             frm.TabControlUsuario.TabPages.RemoveAt(2);
             frm.TabControlUsuario.TabPages.RemoveAt(0);
-            frm.SetExcluirUsuario(true);
+            frm.DefinirEstadoUsuario(Usuario.EstadoUsuario.Excluir);
             frm.ShowDialog();
+        }
+
+        private void sairSistema(object sender, EventArgs e)
+        {
+            MessageBox.Show("Até logo, " + controleLogin.nomeUsuario + "!", "Mensagem");
+            this.Close();
         }
     }
 }

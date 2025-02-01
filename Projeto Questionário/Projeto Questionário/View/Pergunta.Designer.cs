@@ -622,6 +622,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(871, 524);
             Controls.Add(tabPergunta);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Pergunta";
             Text = "FORMULÁRIO DE CONTROLE DE PERGUNTAS";
             Load += configForm;

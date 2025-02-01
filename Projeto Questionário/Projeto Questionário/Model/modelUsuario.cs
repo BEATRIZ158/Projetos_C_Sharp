@@ -22,7 +22,5 @@ namespace Projeto_Questionário.Model
         public string Senha { get => senha; set => senha = value; }
         public int IdTipoUsuario { get => idTipoUsuario; set => idTipoUsuario = value; }
 
-        //Criar o cadastro de usuário
-
     }
 }

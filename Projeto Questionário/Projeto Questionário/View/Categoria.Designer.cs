@@ -257,6 +257,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(621, 291);
             Controls.Add(tabCategoria);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "CATEGORIA";

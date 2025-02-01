@@ -10,16 +10,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Projeto_Questionário.View.Pergunta;
 
 namespace Projeto_Questionário.View
 {
     public partial class Usuario : Form
     {
-        private bool editandoProprioPerfil = false;
-        private bool criarNovoAluno = false;
-        private bool criarNovoProfessor = false;
-        private bool pesquUsuario = false;
-        private bool excluirUsuario = false;
+        public enum EstadoUsuario
+        {
+            CriarNovoAluno,
+            CriarNovoProf,
+            EditarPropPerfil,
+            PesqUsuario,
+            Excluir,
+            EditarUsuario
+        }
+
+        private EstadoUsuario estadoUsuario;
+
+        public void DefinirEstadoUsuario(EstadoUsuario estado)
+        {
+            estadoUsuario = estado;
+        }
 
         public enum EstadoCancelarUsuario
         {
@@ -28,32 +40,6 @@ namespace Projeto_Questionário.View
         }
 
         private EstadoCancelarUsuario estadoAtual;
-
-        public void SetEditandoProprioPerfil(bool valor)
-        {
-            editandoProprioPerfil = valor;
-        }
-
-        // Estado para criar um novo usuário do tipo Aluno
-        public void SetCriarNovoAluno(bool valor)
-        {
-            criarNovoAluno = valor;
-        }
-
-        public void SetCriarNovoAProfessor(bool valor)
-        {
-            criarNovoProfessor = valor;
-        }
-
-        public void SetpesqUsuario(bool valor)
-        {
-            pesquUsuario = valor;
-        }
-
-        public void SetExcluirUsuario(bool valor)
-        {
-            excluirUsuario = valor;
-        }
 
         //Métodos públicos para chamar métodos privados
         public TabControl TabControlUsuario
@@ -178,21 +164,21 @@ namespace Projeto_Questionário.View
                     int idTipoUsuarioBanco = int.Parse(usuario["idtipousuario"].ToString());
 
                     // Filtra de acordo com o tipo do usuário logado
-                    if (controleLogin.idTipoUsuario == 3 || criarNovoAluno == true) // Se for Professor
+                    if (controleLogin.idTipoUsuario == 3 || estadoUsuario == EstadoUsuario.CriarNovoAluno) // Se for Professor
                     {
                         if (idTipoUsuarioBanco != 2) // Mostrar apenas Alunos
                         {
                             continue; // Ignora registros que não são alunos
                         }
                     }
-                    else if (criarNovoProfessor)
+                    else if (estadoUsuario == EstadoUsuario.CriarNovoProf)
                     {
                         if (idTipoUsuarioBanco != 3) // Mostrar apenas Professor
                         {
                             continue;
                         }
                     }
-                    else if (excluirUsuario)
+                    else if (estadoUsuario == EstadoUsuario.Excluir)
                     {
                         int idUsuario = int.Parse(usuario["idusuario"].ToString());
                         if (controleLogin.idUsuario == idUsuario)
@@ -244,30 +230,35 @@ namespace Projeto_Questionário.View
             {
                 //se o usuário for professor
                 if (controleLogin.idTipoUsuario == (int)TipoUsuario.Professor)
-                {
-                    if (!editandoProprioPerfil)
+                {//Alterar aqui!
+                    if (estadoUsuario != EstadoUsuario.EditarPropPerfil)
                     {
                         //define que o tipo de novo usuário será ALUNO (2)
                         comboBoxTipo.SelectedIndex = 1;
                         comboBoxTipo.Enabled = false;//Deixa vísivel mas desabilitado
                     }
                 }
-            }
-            if (criarNovoAluno)
+            }//Alterar aqui!
+            else if (estadoUsuario == EstadoUsuario.CriarNovoAluno)
             {
                 comboBoxTipo.SelectedIndex = 1;
                 comboBoxTipo.Enabled = false;
-            }
-            else if (criarNovoProfessor)
+            }//Alterar aqui!
+            else if (estadoUsuario == EstadoUsuario.CriarNovoProf)
             {
                 comboBoxTipo.SelectedIndex = 2;
                 comboBoxTipo.Enabled = false;
+            }
+            else if(estadoUsuario == EstadoUsuario.EditarUsuario)
+            {
+                comboBoxTipo.Enabled = true;
             }
         }
 
         private void selecionaLinha(object sender, DataGridViewCellEventArgs e)
         {
-            if (excluirUsuario)
+            //Alterar aqui!
+            if (estadoUsuario == EstadoUsuario.Excluir)
             {
                 DialogResult botao =
                 MessageBox.Show("Deseja excluir este usuário?", "Excluir conteúdo",
@@ -283,8 +274,8 @@ namespace Projeto_Questionário.View
                     MessageBox.Show(res);
                 }
             }
-
-            else if (!pesquUsuario)
+            //Alterar aqui!
+            else if (estadoUsuario != EstadoUsuario.PesqUsuario)
             {
                 //dialogResult - retorna qual botão foi clicado em uma mensagem
                 DialogResult botao1 =
@@ -356,8 +347,8 @@ namespace Projeto_Questionário.View
         {
             modelUsuario mUsuario = new modelUsuario();
             controllerUsuario cUsuario = new controllerUsuario();
-
-            if (editandoProprioPerfil)
+            //Alterar aqui!
+            if (estadoUsuario == EstadoUsuario.EditarPropPerfil)
             {
                 mUsuario.IdUsuario = controleLogin.idUsuario; // ID do próprio usuário
             }
@@ -391,7 +382,6 @@ namespace Projeto_Questionário.View
 
             estadoAtual = EstadoCancelarUsuario.Edicao;
             cancelarUsuario();
-            editandoProprioPerfil = false;
         }
 
         private void cancelarUsuario()

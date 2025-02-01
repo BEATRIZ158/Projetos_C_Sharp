@@ -463,6 +463,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(695, 394);
             Controls.Add(tabUsuario);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Usuario";

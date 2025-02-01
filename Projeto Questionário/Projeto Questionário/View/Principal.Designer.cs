@@ -48,6 +48,8 @@
             MenuExcluirPergunta = new ToolStripMenuItem();
             MenuExcluirPontuacao = new ToolStripMenuItem();
             MenuExcluirUsuario = new ToolStripMenuItem();
+            toolStripMenuItem1 = new ToolStripMenuItem();
+            sAIRToolStripMenuItem = new ToolStripMenuItem();
             toolStrip1 = new ToolStrip();
             verPontos = new ToolStripButton();
             novoAluno = new ToolStripButton();
@@ -62,7 +64,7 @@
             // menuStrip1
             // 
             menuStrip1.Font = new Font("Century", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { menuNovo, menuEditar, menuPesquisar, menuExcluir });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { menuNovo, menuEditar, menuPesquisar, menuExcluir, toolStripMenuItem1 });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(9, 3, 0, 3);
@@ -223,13 +225,29 @@
             MenuExcluirUsuario.Text = "USUARIO";
             MenuExcluirUsuario.Click += chamarExcluirUsuario;
             // 
+            // toolStripMenuItem1
+            // 
+            toolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { sAIRToolStripMenuItem });
+            toolStripMenuItem1.Image = (Image)resources.GetObject("toolStripMenuItem1.Image");
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new Size(116, 24);
+            toolStripMenuItem1.Text = "USUÁRIO";
+            // 
+            // sAIRToolStripMenuItem
+            // 
+            sAIRToolStripMenuItem.Image = (Image)resources.GetObject("sAIRToolStripMenuItem.Image");
+            sAIRToolStripMenuItem.Name = "sAIRToolStripMenuItem";
+            sAIRToolStripMenuItem.Size = new Size(180, 24);
+            sAIRToolStripMenuItem.Text = "SAIR";
+            sAIRToolStripMenuItem.Click += sairSistema;
+            // 
             // toolStrip1
             // 
             toolStrip1.Dock = DockStyle.Left;
             toolStrip1.Items.AddRange(new ToolStripItem[] { verPontos, novoAluno, novoProfessor, novaPergunta, verDesempenho });
             toolStrip1.Location = new Point(0, 30);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(89, 478);
+            toolStrip1.Size = new Size(89, 451);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -291,7 +309,7 @@
             verDesempenho.ImageScaling = ToolStripItemImageScaling.None;
             verDesempenho.ImageTransparentColor = Color.Magenta;
             verDesempenho.Name = "verDesempenho";
-            verDesempenho.Size = new Size(86, 83);
+            verDesempenho.Size = new Size(88, 83);
             verDesempenho.Text = "DESEMPENHO";
             verDesempenho.TextAlign = ContentAlignment.BottomCenter;
             verDesempenho.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -315,14 +333,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(924, 508);
+            ClientSize = new Size(924, 481);
             Controls.Add(toolStrip1);
             Controls.Add(menuStrip1);
             Font = new Font("Century", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             MainMenuStrip = menuStrip1;
             Margin = new Padding(4);
             Name = "Principal";
-            Text = "Form1";
+            Text = "PRINCIPAL";
             Load += loadPrincipal;
             Shown += formLogin;
             VisibleChanged += habilitarBotoes;
@@ -362,5 +381,7 @@
         private ToolStripMenuItem MenuExcluirUsuario;
         private ToolStripMenuItem MenuExcluirPontuacao;
         private ToolStripMenuItem qUESTIONÁRIOToolStripMenuItem;
+        private ToolStripMenuItem toolStripMenuItem1;
+        private ToolStripMenuItem sAIRToolStripMenuItem;
     }
 }

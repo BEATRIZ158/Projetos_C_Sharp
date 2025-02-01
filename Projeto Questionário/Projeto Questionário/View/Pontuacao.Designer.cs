@@ -148,6 +148,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(tabControl1);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Pontuacao";
             Text = "DESEMPENHO";
             tabControl1.ResumeLayout(false);
