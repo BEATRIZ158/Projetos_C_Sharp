@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|solutionrelative:projeto question\u00E1rio\\view\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|c:\\users\\beatr\\onedrive\\\u00E1rea de trabalho\\ads - 5 semestre\\lab. de eng de software\\projeto question\u00E1rio\\projeto question\u00E1rio\\view\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\projeto question\u00E1rio\\view\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|solutionrelative:projeto question\u00E1rio\\view\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -90,8 +90,7 @@
               "ToolTip": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Categoria.cs [Projeto]",
               "RelativeToolTip": "Projeto Question\u00E1rio\\View\\Categoria.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T12:03:24.972Z",
-              "EditorCaption": " [Projeto]"
+              "WhenOpened": "2025-02-06T12:03:24.972Z"
             },
             {
               "$type": "Document",
@@ -113,7 +112,7 @@
               "RelativeDocumentMoniker": "Projeto Question\u00E1rio\\Controller\\controllerPergunta.cs",
               "ToolTip": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\Controller\\controllerPergunta.cs",
               "RelativeToolTip": "Projeto Question\u00E1rio\\Controller\\controllerPergunta.cs",
-              "ViewState": "AgIAAHcAAAAAAAAAAAAAAHcAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAAAHoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-05T22:24:48.173Z",
               "EditorCaption": ""
