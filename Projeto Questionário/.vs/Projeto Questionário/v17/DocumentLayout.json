@@ -3,60 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\projeto question\u00E1rio\\view\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|solutionrelative:projeto question\u00E1rio\\view\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|c:\\users\\beatr\\onedrive\\\u00E1rea de trabalho\\ads - 5 semestre\\lab. de eng de software\\projeto question\u00E1rio\\projeto question\u00E1rio\\controller\\controllerpergunta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|solutionrelative:projeto question\u00E1rio\\controller\\controllerpergunta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|c:\\users\\beatr\\onedrive\\\u00E1rea de trabalho\\ads - 5 semestre\\lab. de eng de software\\projeto question\u00E1rio\\projeto question\u00E1rio\\view\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|solutionrelative:projeto question\u00E1rio\\view\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|c:\\users\\beatr\\onedrive\\\u00E1rea de trabalho\\ads - 5 semestre\\lab. de eng de software\\projeto question\u00E1rio\\projeto question\u00E1rio\\view\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|solutionrelative:projeto question\u00E1rio\\view\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|c:\\users\\beatr\\onedrive\\\u00E1rea de trabalho\\ads - 5 semestre\\lab. de eng de software\\projeto question\u00E1rio\\projeto question\u00E1rio\\view\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|solutionrelative:projeto question\u00E1rio\\view\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|c:\\users\\beatr\\onedrive\\\u00E1rea de trabalho\\ads - 5 semestre\\lab. de eng de software\\projeto question\u00E1rio\\projeto question\u00E1rio\\controller\\controlelogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|solutionrelative:projeto question\u00E1rio\\controller\\controlelogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|c:\\users\\beatr\\onedrive\\\u00E1rea de trabalho\\ads - 5 semestre\\lab. de eng de software\\projeto question\u00E1rio\\projeto question\u00E1rio\\controller\\controllerusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|solutionrelative:projeto question\u00E1rio\\controller\\controllerusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\projeto question\u00E1rio\\view\\pontuacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|solutionrelative:projeto question\u00E1rio\\view\\pontuacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|c:\\users\\beatr\\onedrive\\\u00E1rea de trabalho\\ads - 5 semestre\\lab. de eng de software\\projeto question\u00E1rio\\projeto question\u00E1rio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|solutionrelative:projeto question\u00E1rio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\projeto question\u00E1rio\\view\\pergunta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|solutionrelative:projeto question\u00E1rio\\view\\pergunta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|c:\\users\\beatr\\onedrive\\\u00E1rea de trabalho\\ads - 5 semestre\\lab. de eng de software\\projeto question\u00E1rio\\projeto question\u00E1rio\\view\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|solutionrelative:projeto question\u00E1rio\\view\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\projeto question\u00E1rio\\view\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|solutionrelative:projeto question\u00E1rio\\view\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|c:\\users\\beatr\\onedrive\\\u00E1rea de trabalho\\ads - 5 semestre\\lab. de eng de software\\projeto question\u00E1rio\\projeto question\u00E1rio\\view\\principal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|solutionrelative:projeto question\u00E1rio\\view\\principal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|c:\\users\\beatr\\onedrive\\\u00E1rea de trabalho\\ads - 5 semestre\\lab. de eng de software\\projeto question\u00E1rio\\projeto question\u00E1rio\\view\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|solutionrelative:projeto question\u00E1rio\\view\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|c:\\users\\beatr\\onedrive\\\u00E1rea de trabalho\\ads - 5 semestre\\lab. de eng de software\\projeto question\u00E1rio\\projeto question\u00E1rio\\model\\modelusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|solutionrelative:projeto question\u00E1rio\\model\\modelusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|c:\\users\\beatr\\onedrive\\\u00E1rea de trabalho\\ads - 5 semestre\\lab. de eng de software\\projeto question\u00E1rio\\projeto question\u00E1rio\\view\\questionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|solutionrelative:projeto question\u00E1rio\\view\\questionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|c:\\users\\beatr\\onedrive\\\u00E1rea de trabalho\\ads - 5 semestre\\lab. de eng de software\\projeto question\u00E1rio\\projeto question\u00E1rio\\controller\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|solutionrelative:projeto question\u00E1rio\\controller\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|c:\\users\\beatr\\onedrive\\\u00E1rea de trabalho\\ads - 5 semestre\\lab. de eng de software\\projeto question\u00E1rio\\projeto question\u00E1rio\\view\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|solutionrelative:projeto question\u00E1rio\\view\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\projeto question\u00E1rio\\view\\questionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|solutionrelative:projeto question\u00E1rio\\view\\questionario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\projeto question\u00E1rio\\view\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|solutionrelative:projeto question\u00E1rio\\view\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\projeto question\u00E1rio\\view\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|solutionrelative:projeto question\u00E1rio\\view\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|c:\\users\\beatr\\onedrive\\\u00E1rea de trabalho\\ads - 5 semestre\\lab. de eng de software\\projeto question\u00E1rio\\projeto question\u00E1rio\\view\\pontuacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|solutionrelative:projeto question\u00E1rio\\view\\pontuacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|c:\\users\\beatr\\onedrive\\\u00E1rea de trabalho\\ads - 5 semestre\\lab. de eng de software\\projeto question\u00E1rio\\projeto question\u00E1rio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|solutionrelative:projeto question\u00E1rio\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|c:\\users\\beatr\\onedrive\\\u00E1rea de trabalho\\ads - 5 semestre\\lab. de eng de software\\projeto question\u00E1rio\\projeto question\u00E1rio\\controller\\controllerusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A1A36C9-9FE8-427B-B545-2414679728EA}|Projeto Question\u00E1rio\\Projeto Question\u00E1rio.csproj|solutionrelative:projeto question\u00E1rio\\controller\\controllerusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,167 +54,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\Program.cs",
-              "RelativeDocumentMoniker": "Projeto Question\u00E1rio\\Program.cs",
-              "ToolTip": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\Program.cs",
-              "RelativeToolTip": "Projeto Question\u00E1rio\\Program.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwA8AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T19:11:42.966Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "controllerUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\Controller\\controllerUsuario.cs",
-              "RelativeDocumentMoniker": "Projeto Question\u00E1rio\\Controller\\controllerUsuario.cs",
-              "ToolTip": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\Controller\\controllerUsuario.cs",
-              "RelativeToolTip": "Projeto Question\u00E1rio\\Controller\\controllerUsuario.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAYwDgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T18:58:41.667Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "modelUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\Model\\modelUsuario.cs",
-              "RelativeDocumentMoniker": "Projeto Question\u00E1rio\\Model\\modelUsuario.cs",
-              "ToolTip": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\Model\\modelUsuario.cs",
-              "RelativeToolTip": "Projeto Question\u00E1rio\\Model\\modelUsuario.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAuwBcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T18:57:13.596Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Connection.cs",
-              "DocumentMoniker": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\Controller\\Connection.cs",
-              "RelativeDocumentMoniker": "Projeto Question\u00E1rio\\Controller\\Connection.cs",
-              "ToolTip": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\Controller\\Connection.cs",
-              "RelativeToolTip": "Projeto Question\u00E1rio\\Controller\\Connection.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAUAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T18:56:09.589Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Principal.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Principal.Designer.cs",
-              "RelativeDocumentMoniker": "Projeto Question\u00E1rio\\View\\Principal.Designer.cs",
-              "ToolTip": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Principal.Designer.cs",
-              "RelativeToolTip": "Projeto Question\u00E1rio\\View\\Principal.Designer.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAYwBYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T18:55:15.5Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "controleLogin.cs",
-              "DocumentMoniker": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\Controller\\controleLogin.cs",
-              "RelativeDocumentMoniker": "Projeto Question\u00E1rio\\Controller\\controleLogin.cs",
-              "ToolTip": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\Controller\\controleLogin.cs",
-              "RelativeToolTip": "Projeto Question\u00E1rio\\Controller\\controleLogin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T18:53:57.25Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Principal.cs",
-              "DocumentMoniker": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Principal.cs",
-              "RelativeDocumentMoniker": "Projeto Question\u00E1rio\\View\\Principal.cs",
-              "ToolTip": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Principal.cs",
-              "RelativeToolTip": "Projeto Question\u00E1rio\\View\\Principal.cs",
-              "ViewState": "AgIAAOkAAAAAAAAAAAArwO4AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T18:52:15.636Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Login.cs",
-              "DocumentMoniker": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Login.cs",
-              "RelativeDocumentMoniker": "Projeto Question\u00E1rio\\View\\Login.cs",
-              "ToolTip": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Login.cs",
-              "RelativeToolTip": "Projeto Question\u00E1rio\\View\\Login.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAYwCIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T18:51:47.864Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Questionario.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Questionario.cs",
-              "RelativeDocumentMoniker": "Projeto Question\u00E1rio\\View\\Questionario.cs",
-              "ToolTip": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Questionario.cs [Projeto]",
-              "RelativeToolTip": "Projeto Question\u00E1rio\\View\\Questionario.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T18:49:48.061Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Pontuacao.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Pontuacao.cs",
-              "RelativeDocumentMoniker": "Projeto Question\u00E1rio\\View\\Pontuacao.cs",
-              "ToolTip": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Pontuacao.cs [Projeto]",
-              "RelativeToolTip": "Projeto Question\u00E1rio\\View\\Pontuacao.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T18:49:30.733Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Pergunta.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Pergunta.cs",
-              "RelativeDocumentMoniker": "Projeto Question\u00E1rio\\View\\Pergunta.cs",
-              "ToolTip": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Pergunta.cs [Projeto]",
-              "RelativeToolTip": "Projeto Question\u00E1rio\\View\\Pergunta.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T18:48:52.931Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Categoria.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Categoria.cs",
-              "RelativeDocumentMoniker": "Projeto Question\u00E1rio\\View\\Categoria.cs",
-              "ToolTip": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Categoria.cs [Projeto]",
-              "RelativeToolTip": "Projeto Question\u00E1rio\\View\\Categoria.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T18:48:00.924Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Login.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Login.cs",
-              "RelativeDocumentMoniker": "Projeto Question\u00E1rio\\View\\Login.cs",
-              "ToolTip": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Login.cs [Projeto]",
-              "RelativeToolTip": "Projeto Question\u00E1rio\\View\\Login.cs [Projeto]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T18:46:34.548Z",
-              "EditorCaption": " [Projeto]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Principal.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Principal.cs",
               "RelativeDocumentMoniker": "Projeto Question\u00E1rio\\View\\Principal.cs",
@@ -234,7 +66,128 @@
               "RelativeToolTip": "Projeto Question\u00E1rio\\View\\Principal.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-28T13:45:24.419Z",
-              "EditorCaption": " [Projeto]"
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Categoria.cs",
+              "DocumentMoniker": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Categoria.cs",
+              "RelativeDocumentMoniker": "Projeto Question\u00E1rio\\View\\Categoria.cs",
+              "ToolTip": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Categoria.cs",
+              "RelativeToolTip": "Projeto Question\u00E1rio\\View\\Categoria.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAnwI4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T12:04:53.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Categoria.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Categoria.cs",
+              "RelativeDocumentMoniker": "Projeto Question\u00E1rio\\View\\Categoria.cs",
+              "ToolTip": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Categoria.cs [Projeto]",
+              "RelativeToolTip": "Projeto Question\u00E1rio\\View\\Categoria.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T12:03:24.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Questionario.cs",
+              "DocumentMoniker": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Questionario.cs",
+              "RelativeDocumentMoniker": "Projeto Question\u00E1rio\\View\\Questionario.cs",
+              "ToolTip": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Questionario.cs",
+              "RelativeToolTip": "Projeto Question\u00E1rio\\View\\Questionario.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAIwBAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T22:24:59.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "controllerPergunta.cs",
+              "DocumentMoniker": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\Controller\\controllerPergunta.cs",
+              "RelativeDocumentMoniker": "Projeto Question\u00E1rio\\Controller\\controllerPergunta.cs",
+              "ToolTip": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\Controller\\controllerPergunta.cs",
+              "RelativeToolTip": "Projeto Question\u00E1rio\\Controller\\controllerPergunta.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAAAHcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T22:24:48.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Principal.cs",
+              "DocumentMoniker": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Principal.cs",
+              "RelativeDocumentMoniker": "Projeto Question\u00E1rio\\View\\Principal.cs",
+              "ToolTip": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Principal.cs",
+              "RelativeToolTip": "Projeto Question\u00E1rio\\View\\Principal.cs",
+              "ViewState": "AgIAAHQAAAAAAAAAAAASwHgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T12:26:40.12Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Usuario.cs",
+              "RelativeDocumentMoniker": "Projeto Question\u00E1rio\\View\\Usuario.cs",
+              "ToolTip": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Usuario.cs",
+              "RelativeToolTip": "Projeto Question\u00E1rio\\View\\Usuario.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAiwD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T12:06:04.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Usuario.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Usuario.cs",
+              "RelativeDocumentMoniker": "Projeto Question\u00E1rio\\View\\Usuario.cs",
+              "ToolTip": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Usuario.cs [Projeto]",
+              "RelativeToolTip": "Projeto Question\u00E1rio\\View\\Usuario.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T12:03:13.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Pontuacao.cs",
+              "DocumentMoniker": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Pontuacao.cs",
+              "RelativeDocumentMoniker": "Projeto Question\u00E1rio\\View\\Pontuacao.cs",
+              "ToolTip": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\View\\Pontuacao.cs",
+              "RelativeToolTip": "Projeto Question\u00E1rio\\View\\Pontuacao.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAzwAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T20:51:30.716Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\Program.cs",
+              "RelativeDocumentMoniker": "Projeto Question\u00E1rio\\Program.cs",
+              "ToolTip": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\Program.cs",
+              "RelativeToolTip": "Projeto Question\u00E1rio\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T19:11:42.966Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "controllerUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\Controller\\controllerUsuario.cs",
+              "RelativeDocumentMoniker": "Projeto Question\u00E1rio\\Controller\\controllerUsuario.cs",
+              "ToolTip": "C:\\Users\\beatr\\OneDrive\\\u00C1rea de Trabalho\\ADS - 5 Semestre\\Lab. De eng de Software\\Projeto Question\u00E1rio\\Projeto Question\u00E1rio\\Controller\\controllerUsuario.cs",
+              "RelativeToolTip": "Projeto Question\u00E1rio\\Controller\\controllerUsuario.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAgwC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T18:58:41.667Z"
             }
           ]
         }

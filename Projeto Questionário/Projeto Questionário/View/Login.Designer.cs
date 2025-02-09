@@ -92,7 +92,6 @@
             textBox2.PasswordChar = '*';
             textBox2.Size = new Size(450, 30);
             textBox2.TabIndex = 3;
-            textBox2.Text = "123edu";
             // 
             // textBox1
             // 
@@ -101,7 +100,6 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(450, 30);
             textBox1.TabIndex = 2;
-            textBox1.Text = "eduardo@teste.com";
             // 
             // label2
             // 

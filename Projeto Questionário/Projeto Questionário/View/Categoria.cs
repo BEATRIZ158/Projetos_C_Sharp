@@ -136,6 +136,9 @@ namespace Projeto_Questionário.View
             string res = cCategoria.atualizaCategorias(mCategoria);
 
             MessageBox.Show(res);
+
+            estadoAtual = EstadoCancelarCategoria.Edicao;
+            CancelarCategoria();
         }
 
         public void limparCategoria()

@@ -6,8 +6,8 @@ namespace Projeto_Questionário
 {
     public partial class Principal : Form
     {
-        public bool editandoOutroPerfil = false;
-        public bool editandoProprioPerfil = false; // Por padrão, assume que está editando outro usuário.
+        //public bool editandoOutroPerfil = false;
+        //public bool editandoProprioPerfil = false; // Por padrão, assume que está editando outro usuário.
 
         public enum TipoUsuario
         {
@@ -97,6 +97,7 @@ namespace Projeto_Questionário
                 verPontos.Visible = false;
                 novoProfessor.Visible = false;
                 novoUsuario.Visible = false;
+                novoQuest.Visible = false;
 
                 MenuExcluirPontuacao.Visible = false;
                 MenuExcluirUsuario.Visible = false;
@@ -121,15 +122,15 @@ namespace Projeto_Questionário
         private void formEditarUsuario(object sender, EventArgs e)
         {
             Usuario frm = new Usuario(controleLogin.idUsuario);
-            if (controleLogin.idTipoUsuario != 1)
-            {
-                frm.DefinirEstadoUsuario(Usuario.EstadoUsuario.EditarPropPerfil);
-                frm.TabControlUsuario.TabPages.RemoveAt(1);
-                frm.TabControlUsuario.TabPages.RemoveAt(0);
-            }
             if (controleLogin.idTipoUsuario == 1)
             {
                 frm.DefinirEstadoUsuario(Usuario.EstadoUsuario.EditarUsuario);
+                frm.TabControlUsuario.TabPages.RemoveAt(0);
+            }
+            else if (controleLogin.idTipoUsuario != 1)
+            {
+                frm.DefinirEstadoUsuario(Usuario.EstadoUsuario.EditarPropPerfil);
+                frm.TabControlUsuario.TabPages.RemoveAt(1);
                 frm.TabControlUsuario.TabPages.RemoveAt(0);
             }
             frm.ShowDialog();

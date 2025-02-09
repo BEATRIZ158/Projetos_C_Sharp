@@ -230,7 +230,7 @@ namespace Projeto_Questionário.View
             {
                 //se o usuário for professor
                 if (controleLogin.idTipoUsuario == (int)TipoUsuario.Professor)
-                {//Alterar aqui!
+                {
                     if (estadoUsuario != EstadoUsuario.EditarPropPerfil)
                     {
                         //define que o tipo de novo usuário será ALUNO (2)
@@ -238,12 +238,12 @@ namespace Projeto_Questionário.View
                         comboBoxTipo.Enabled = false;//Deixa vísivel mas desabilitado
                     }
                 }
-            }//Alterar aqui!
+            }
             else if (estadoUsuario == EstadoUsuario.CriarNovoAluno)
             {
                 comboBoxTipo.SelectedIndex = 1;
                 comboBoxTipo.Enabled = false;
-            }//Alterar aqui!
+            }
             else if (estadoUsuario == EstadoUsuario.CriarNovoProf)
             {
                 comboBoxTipo.SelectedIndex = 2;
@@ -257,7 +257,6 @@ namespace Projeto_Questionário.View
 
         private void selecionaLinha(object sender, DataGridViewCellEventArgs e)
         {
-            //Alterar aqui!
             if (estadoUsuario == EstadoUsuario.Excluir)
             {
                 DialogResult botao =
@@ -274,7 +273,6 @@ namespace Projeto_Questionário.View
                     MessageBox.Show(res);
                 }
             }
-            //Alterar aqui!
             else if (estadoUsuario != EstadoUsuario.PesqUsuario)
             {
                 //dialogResult - retorna qual botão foi clicado em uma mensagem
@@ -325,7 +323,14 @@ namespace Projeto_Questionário.View
                         comboBoxTipo1.SelectedValue = (int)tipoEnum;
                         if (controleLogin.idTipoUsuario == (int)TipoUsuario.Admin)
                         {
-                            comboBoxTipo1.Enabled = true;
+                            if(dataGridViewUser.CurrentRow.Cells[0].Value.ToString() == Convert.ToString(controleLogin.idUsuario))
+                            {
+                                comboBoxTipo1.Enabled = false;
+                            }
+                            else
+                            {
+                                comboBoxTipo1.Enabled = true;
+                            }
                         }
                         else
                         {
@@ -347,7 +352,7 @@ namespace Projeto_Questionário.View
         {
             modelUsuario mUsuario = new modelUsuario();
             controllerUsuario cUsuario = new controllerUsuario();
-            //Alterar aqui!
+            
             if (estadoUsuario == EstadoUsuario.EditarPropPerfil)
             {
                 mUsuario.IdUsuario = controleLogin.idUsuario; // ID do próprio usuário
@@ -360,7 +365,6 @@ namespace Projeto_Questionário.View
                     return;
                 }
                 mUsuario.IdUsuario = Convert.ToInt32(dataGridViewUser.CurrentRow.Cells[0].Value);
-
             }
 
             // Preenche os outros campos

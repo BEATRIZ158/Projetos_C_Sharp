@@ -113,7 +113,7 @@ namespace Projeto_Questionário.View
             {
                 acertos++;
                 lbNumAcertos.Text = acertos.ToString();
-                MessageBox.Show("Acertou miserávi!");
+                MessageBox.Show("ACERTOU!");
             }
             else
             {

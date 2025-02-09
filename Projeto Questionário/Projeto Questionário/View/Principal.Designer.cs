@@ -34,7 +34,7 @@
             novoCategoria = new ToolStripMenuItem();
             novoPergunta = new ToolStripMenuItem();
             novoUsuario = new ToolStripMenuItem();
-            qUESTIONÁRIOToolStripMenuItem = new ToolStripMenuItem();
+            novoQuest = new ToolStripMenuItem();
             menuEditar = new ToolStripMenuItem();
             editarCategoria = new ToolStripMenuItem();
             editarPergunta = new ToolStripMenuItem();
@@ -74,7 +74,7 @@
             // 
             // menuNovo
             // 
-            menuNovo.DropDownItems.AddRange(new ToolStripItem[] { novoCategoria, novoPergunta, novoUsuario, qUESTIONÁRIOToolStripMenuItem });
+            menuNovo.DropDownItems.AddRange(new ToolStripItem[] { novoCategoria, novoPergunta, novoUsuario, novoQuest });
             menuNovo.Font = new Font("Century", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             menuNovo.Name = "menuNovo";
             menuNovo.Size = new Size(70, 24);
@@ -107,14 +107,14 @@
             novoUsuario.Text = "&USUARIO";
             novoUsuario.Click += formQualquerUsuario;
             // 
-            // qUESTIONÁRIOToolStripMenuItem
+            // novoQuest
             // 
-            qUESTIONÁRIOToolStripMenuItem.Image = (Image)resources.GetObject("qUESTIONÁRIOToolStripMenuItem.Image");
-            qUESTIONÁRIOToolStripMenuItem.Name = "qUESTIONÁRIOToolStripMenuItem";
-            qUESTIONÁRIOToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.Q;
-            qUESTIONÁRIOToolStripMenuItem.Size = new Size(272, 24);
-            qUESTIONÁRIOToolStripMenuItem.Text = "QUESTIONÁRIO";
-            qUESTIONÁRIOToolStripMenuItem.Click += formQuestionario;
+            novoQuest.Image = (Image)resources.GetObject("novoQuest.Image");
+            novoQuest.Name = "novoQuest";
+            novoQuest.ShortcutKeys = Keys.Control | Keys.Q;
+            novoQuest.Size = new Size(272, 24);
+            novoQuest.Text = "QUESTIONÁRIO";
+            novoQuest.Click += formQuestionario;
             // 
             // menuEditar
             // 
@@ -237,7 +237,7 @@
             // 
             sAIRToolStripMenuItem.Image = (Image)resources.GetObject("sAIRToolStripMenuItem.Image");
             sAIRToolStripMenuItem.Name = "sAIRToolStripMenuItem";
-            sAIRToolStripMenuItem.Size = new Size(180, 24);
+            sAIRToolStripMenuItem.Size = new Size(119, 24);
             sAIRToolStripMenuItem.Text = "SAIR";
             sAIRToolStripMenuItem.Click += sairSistema;
             // 
@@ -309,7 +309,7 @@
             verDesempenho.ImageScaling = ToolStripItemImageScaling.None;
             verDesempenho.ImageTransparentColor = Color.Magenta;
             verDesempenho.Name = "verDesempenho";
-            verDesempenho.Size = new Size(88, 83);
+            verDesempenho.Size = new Size(86, 83);
             verDesempenho.Text = "DESEMPENHO";
             verDesempenho.TextAlign = ContentAlignment.BottomCenter;
             verDesempenho.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -380,7 +380,7 @@
         private ToolStripMenuItem MenuExcluirPergunta;
         private ToolStripMenuItem MenuExcluirUsuario;
         private ToolStripMenuItem MenuExcluirPontuacao;
-        private ToolStripMenuItem qUESTIONÁRIOToolStripMenuItem;
+        private ToolStripMenuItem novoQuest;
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem sAIRToolStripMenuItem;
     }
